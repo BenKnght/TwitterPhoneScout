@@ -22,8 +22,31 @@ html, body {
 .section {
     width:350px;
     float:left;
-    padding:10px; 
+    padding:20px; 
     color:#336699;
+}
+
+.list {
+    width:600px;
+    float:left;
+    padding:20px; 
+    color:#336699;
+}
+
+
+
+.button input {
+  background-color: #f2580b;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 10px;
+  padding: 12px 24px;
+  transition: background-color 0.5s;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
 }
 
 .header {

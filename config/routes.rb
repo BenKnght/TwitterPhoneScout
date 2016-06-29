@@ -10,7 +10,8 @@ Rails.application.routes.draw do
   get "/users/new" => "users#new"
   #get "/user/:id" => "users#show"
   post "/users" => "users#seek"
-  get "users/all" => "users#all", as: "users_all"
+  get "/users/all" => "users#all", as: "users_all"
+  get "/users/limit" => "users#limit", as: "users_limit"
 
   #post '/' => 'users#seek'
 

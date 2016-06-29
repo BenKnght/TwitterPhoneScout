@@ -11,7 +11,9 @@
    <%= form_for @user do |f| %>
       <%= f.label :name %>
       <%= text_field_tag :name %>
-      <%= submit_tag "Converse" %>
+      <p class="button">
+        <%= submit_tag "Converse" %>
+      </p>
     <% end %>
   </h2>
 </div>

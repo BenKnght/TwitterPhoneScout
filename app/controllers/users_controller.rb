@@ -16,9 +16,20 @@ class UsersController < ApplicationController
 
 
     while (cursor != 0) && (ind <= 10)
-
+      
       reqUrl = "https://api.twitter.com/1.1/followers/list.json?cursor=" + cursor + "&screen_name=" + @uname + "&count=200&skip_status=true&include_user_entities=false"
-      response = RestClient.get(reqUrl, reqPar)
+      
+      #Catch rate limit error if maxed
+      begin 
+        response = RestClient.get(reqUrl, reqPar)
+      rescue
+        if (validFound == 0)
+          User.create(:name => "**FLAG**", :following => ("No match for " + @uname), :phone => "N/A - Try different base", :carry => "N/A - Try different amount", :deviceType => "N/A - Thank you")
+        end
+        User.create(:name => "**FLAG**", :following => ("Rate limit on " + @uname), :phone => "N/A - Try again soon", :carry => "N/A - Limit 24,000 followers/hour", :deviceType => "N/A - Thank you")
+        return redirect_to users_limit_path
+      end
+
       data = (JSON.parse(response))
 
       data["users"].each do |u|
@@ -52,7 +63,7 @@ class UsersController < ApplicationController
 
     #Creates a flag user to let you know that no results were found
     if (validFound == 0)
-      User.create(:name => "No matching users found", :following => @uname, :phone => "Consider different base", :carry => "Or searched amount", :deviceType => "Thank you")
+      User.create(:name => "**FLAG**", :following => ("No match for " + @uname), :phone => "N/A - Try different base", :carry => "N/A - Try different amount", :deviceType => "N/A - Thank you")
     end
 
     redirect_to users_all_path

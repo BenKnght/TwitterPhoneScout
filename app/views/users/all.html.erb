@@ -6,20 +6,26 @@
 </div>
 
 
-<div>
+<div class="list">
   <h2>  
 
   	<% @users.each do |user| %>
-   		<div class="section">
-   			<p> <%= "USER" %> </p> 
-      		<p> User: <%= user.name %> </p> 
-          <p> Following: <%= user.following %> </p>
-      		<p> Phone: <%= user.phone %></p> 
-      		<p> Carrier: <%= user.carry %></p> 
-      		<p> Phone Type: <%= user.deviceType %></p> <br>
-        </div>
+   		<div>
+   			  <p> <%= "FOUND" %> </p> 
+      		<p> <%= "User: " + user.name %> <br>
+          <%= "Following: " + user.following %> <br>
+      		<%= "Phone: " + user.phone %> <br>
+      		<%= "Carrier: " + user.carry %> <br>
+      		<%= "Phone Type: " + user.deviceType %></p> 
+      </div>
    <%end%>
 
   </h2>
+
+  <div class="button">
+    <h1>
+      <%= button_to "Add More", "/users/new", :method => "get" %>
+    </h1>
+  </div>
 </div>
 
