@@ -1,0 +1,24 @@
+<div class="header">
+  <div class="container">
+    <img src="http://pix.iemoji.com/images/emoji/apple/ios-9/256/baby-bottle.png" width="80">
+    <h1>Here's people talking about the same things.</h1>
+  </div>
+</div>
+
+
+<div>
+  <h2>  
+
+  	<% @users.each do |user| %>
+   		<div class="User">
+   			<p> <%= "user.name" %> </p>
+      		<p> <%= user.name %> </p>
+      		<p><%= user.phone %></p>
+      		<p><%= user.carry %></p>
+      		<p><%= user.deviceType %></p>
+        </div>
+   <%end%>
+
+  </h2>
+</div>
+
