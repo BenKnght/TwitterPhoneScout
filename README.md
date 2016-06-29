@@ -1,3 +1,3 @@
 # TwitterPhoneScout
-
-# This is a rails project to crawl Twitter for phone numbers
+#
+# This guy uses Twilio to get information on data from Twitter
