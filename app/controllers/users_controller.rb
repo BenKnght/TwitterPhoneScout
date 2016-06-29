@@ -35,7 +35,7 @@ class UsersController < ApplicationController
             carrierName = twil.carrier["name"].to_s
             carrierType = twil.carrier["type"].to_s
             phoneNum = (twil.national_format).to_s
-            User.create(:name => u["screen_name"].to_s, :phone => phoneNum, :carry => carrierName, :deviceType => carrierType)
+            User.create(:name => u["screen_name"].to_s, :following => @uname, :phone => phoneNum, :carry => carrierName, :deviceType => carrierType)
             validFound = 1
           rescue
             #If no or invalid phone, do nothing
@@ -52,7 +52,7 @@ class UsersController < ApplicationController
 
     #Creates a flag user to let you know that no results were found
     if (validFound == 0)
-      User.create(:name => "No matching users found", :phone => "Consider different base", :carry => "Or searched amount", :deviceType => "Thank you")
+      User.create(:name => "No matching users found", :following => @uname, :phone => "Consider different base", :carry => "Or searched amount", :deviceType => "Thank you")
     end
 
     redirect_to users_all_path

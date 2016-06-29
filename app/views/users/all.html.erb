@@ -10,12 +10,13 @@
   <h2>  
 
   	<% @users.each do |user| %>
-   		<div class="User">
+   		<div class="section">
    			<p> <%= "USER" %> </p> 
-      		<p> <%= user.name %> </p> 
-      		<p><%= user.phone %></p> 
-      		<p><%= user.carry %></p> 
-      		<p><%= user.deviceType %></p> <br>
+      		<p> User: <%= user.name %> </p> 
+          <p> Following: <%= user.following %> </p>
+      		<p> Phone: <%= user.phone %></p> 
+      		<p> Carrier: <%= user.carry %></p> 
+      		<p> Phone Type: <%= user.deviceType %></p> <br>
         </div>
    <%end%>
 

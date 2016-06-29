@@ -19,10 +19,15 @@ html, body {
   font-family: 'Roboto', sans-serif;
 }
 
-
+.section {
+    width:350px;
+    float:left;
+    padding:10px; 
+    color:#336699;
+}
 
 .header {
-  background-color: #33E9FF;
+  background-color: #336699;
   height: 140px;
   text-align: center;
 }
