@@ -20,9 +20,9 @@ html, body {
 }
 
 .section {
-    width:350px;
+    width:600px;
     float:left;
-    padding:20px; 
+    padding:40px; 
     color:#336699;
 }
 
@@ -51,8 +51,9 @@ html, body {
 
 .header {
   background-color: #336699;
-  height: 140px;
+  height: 180px;
   text-align: center;
+  vertical-align: center;
 }
 
 .header img {
@@ -61,8 +62,9 @@ html, body {
 
 .header h1 {
   color: #fff;
-  font-size: 20px;
+  font-size: 22px;
   margin: 0;
+  vertical-align: center;
 }
 
 .user h2 {

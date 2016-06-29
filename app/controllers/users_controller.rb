@@ -26,7 +26,7 @@ class UsersController < ApplicationController
         if (validFound == 0)
           User.create(:name => "**FLAG**", :following => ("No match for " + @uname), :phone => "N/A - Try different base", :carry => "N/A - Try different amount", :deviceType => "N/A - Thank you")
         end
-        User.create(:name => "**FLAG**", :following => ("Rate limit on " + @uname), :phone => "N/A - Try again soon", :carry => "N/A - Limit 24,000 followers/hour", :deviceType => "N/A - Thank you")
+        User.create(:name => "**FLAG**", :following => ("Error on " + @uname), :phone => "N/A - Hit rate limit or invalid user", :carry => "N/A - Limit 24,000 followers/hour", :deviceType => "N/A - Thank you")
         return redirect_to users_limit_path
       end
 
