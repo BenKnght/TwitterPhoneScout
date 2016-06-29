@@ -10283,3 +10283,224 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
+
+
+Started GET "/" for ::1 at 2016-06-29 13:59:40 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 24ms (Views: 17.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-29 13:59:41 -0400
+
+
+Started GET "/assets/application.self-480070822e6b4dcc84d301a88899e990a858f48f67de2a1a89ac93453a2fbfa7.css?body=1" for ::1 at 2016-06-29 13:59:41 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-29 13:59:41 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-29 13:59:41 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-29 13:59:41 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-29 13:59:41 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-29 13:59:41 -0400
+
+
+Started POST "/users" for ::1 at 2016-06-29 13:59:45 -0400
+Processing by UsersController#seek as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jJetAdCUWH/nbHV2mQHVAasq8U4rsqAC83UKJZql6bg8W2vmDOv6TcOwO04yu7vpC/nog25Mp7TLr14RjeoIxA==", "name"=>"p4miles", "commit"=>"Converse"}
+Completed 500 Internal Server Error in 5183ms (ActiveRecord: 0.0ms)
+
+ActiveRecord::UnknownAttributeError (unknown attribute 'following' for User.):
+  app/controllers/users_controller.rb:55:in `seek'
+
+
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (58.9ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (45.4ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (100.9ms)
+  [1m[36m (3.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160623215337)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (4.5ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" text, "following" text, "phone" text, "carry" text, "deviceType" text) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160623215337"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateFollows (20160623215518)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.7ms)[0m  [1mCREATE TABLE "follows" ("id" serial primary key, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160623215518"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to AddCarryToUsers (20160628185000)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160628185000"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (4.3ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'follows'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (5.0ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/" for ::1 at 2016-06-29 14:00:49 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 314ms (Views: 280.2ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/" for ::1 at 2016-06-29 14:00:49 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2016-06-29 14:00:52 -0400
+Processing by UsersController#seek as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yN65gX/kfQudqe+6MlGQdq5dyF2qxm2PT8sn2NmfHpV4En9mo5vfObl1oYKZ6/6eDo7RkO84ajl3EXPsztD/6Q==", "name"=>"p4miles", "commit"=>"Converse"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("name", "following", "phone", "carry", "deviceType") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "cachecreative"], ["following", "p4miles"], ["phone", "(865) 661-9434"], ["carry", "Verizon Wireless"], ["deviceType", "mobile"]]
+  [1m[35m (1.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "yourstoryshoes"], ["following", "p4miles"], ["phone", "(865) 661-9434"], ["carry", "Verizon Wireless"], ["deviceType", "mobile"]]
+  [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("name", "following", "phone", "carry", "deviceType") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "MoesNorthshore"], ["following", "p4miles"], ["phone", "(865) 696-2006"], ["carry", "AT&T Wireless"], ["deviceType", "mobile"]]
+  [1m[35m (1.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/all
+Completed 302 Found in 3174ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/users/all" for ::1 at 2016-06-29 14:00:56 -0400
+Processing by UsersController#all as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/all.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-06-29 14:24:11 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 261ms (Views: 242.4ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/application.self-480070822e6b4dcc84d301a88899e990a858f48f67de2a1a89ac93453a2fbfa7.css?body=1" for ::1 at 2016-06-29 14:24:11 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-29 14:24:11 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-29 14:24:11 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-29 14:24:11 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-29 14:24:11 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-29 14:24:11 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-29 14:24:11 -0400
+
+
+Started POST "/users" for ::1 at 2016-06-29 14:24:17 -0400
+Processing by UsersController#seek as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9j1VZe+KZ3COU8S0rbv0qDG7PICS/F5bRZhYok+9cgdG8ZOCM/XFQqqPiowGAZpAkWglTdcCWe19QgyWWPKTew==", "name"=>"BenKnght", "commit"=>"Converse"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("name", "following", "phone", "carry", "deviceType") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "No matching users found"], ["following", "BenKnght"], ["phone", "Consider different base"], ["carry", "Or searched amount"], ["deviceType", "Thank you"]]
+  [1m[35m (1.7ms)[0m  COMMIT
+Redirected to http://localhost:5000/users/all
+Completed 302 Found in 1614ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/users/all" for ::1 at 2016-06-29 14:24:18 -0400
+Processing by UsersController#all as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/all.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-06-29 14:26:16 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 276ms (Views: 257.3ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/users" for ::1 at 2016-06-29 14:27:11 -0400
+Processing by UsersController#seek as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ju5bOOclWNXE8jOuyH9qV4aQ7cTnqz4sIblZVMdJL5s+Ip3fO1r65+AufZZjxQS/JkP0CaJVOZoZYw1g0AbO5w==", "name"=>"blakeir", "commit"=>"Converse"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("name", "following", "phone", "carry", "deviceType") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "blastchatbleez"], ["following", "blakeir"], ["phone", "(551) 804-7174"], ["carry", "Sprint Spectrum, L.P."], ["deviceType", "mobile"]]
+  [1m[35m (1.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "ChipotleBot"], ["following", "blakeir"], ["phone", "(424) 373-7626"], ["carry", "Twilio"], ["deviceType", "voip"]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "following", "phone", "carry", "deviceType") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "SuperPhone"], ["following", "blakeir"], ["phone", "(646) 576-7048"], ["carry", "Twilio"], ["deviceType", "voip"]]
+  [1m[35m (1.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "CallumJBooker"], ["following", "blakeir"], ["phone", "(607) 434-7166"], ["carry", "Verizon Wireless"], ["deviceType", "mobile"]]
+  [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "following", "phone", "carry", "deviceType") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "video_meeting"], ["following", "blakeir"], ["phone", "(855) 879-8433"], ["carry", ""], ["deviceType", "landline"]]
+  [1m[35m (1.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "staelenslock"], ["following", "blakeir"], ["phone", "(734) 224-2824"], ["carry", "Twilio"], ["deviceType", "voip"]]
+  [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "following", "phone", "carry", "deviceType") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "RocketFiber"], ["following", "blakeir"], ["phone", "(844) 847-6253"], ["carry", ""], ["deviceType", "landline"]]
+  [1m[35m (1.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "getitEazy"], ["following", "blakeir"], ["phone", "(512) 213-0883"], ["carry", "Twilio"], ["deviceType", "voip"]]
+  [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "following", "phone", "carry", "deviceType") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "chrisamccoy"], ["following", "blakeir"], ["phone", "(415) 915-8574"], ["carry", "Twilio"], ["deviceType", "voip"]]
+  [1m[35m (1.7ms)[0m  COMMIT
+Redirected to http://localhost:5000/users/all
+Completed 302 Found in 7970ms (ActiveRecord: 20.2ms)
+
+
+Started GET "/users/all" for ::1 at 2016-06-29 14:27:19 -0400
+Processing by UsersController#all as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/all.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.4ms)
