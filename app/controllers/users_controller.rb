@@ -94,6 +94,30 @@ class UsersController < ApplicationController
     return redirect_to "/users/all"
   end
 
+  def getstats
+    @carriers = {}
+    @types = {}
+    all = User.all
+
+    all.each do |u|
+      c = (u.carry).to_sym
+      d = (u.deviceType).to_sym
+
+      if @carriers.key?(c)
+        @carriers[c] += 1
+      else
+        @carriers[c] = 1
+      end
+
+      if @types.key?(d)
+        @types[d] += 1
+      else
+        @types[d] = 1
+      end
+
+    end
+
+  end
 
   #
   #PRIVATE METHODS

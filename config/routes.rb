@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get "/users/confirmclear" => "users#confirmclear"
   get "/users/single/:id" => "users#single", as: "users_single"
   get "/users/killone/:id" => "users#killone", as: "users_killone"
+  get "/users/getstats" => "users#getstats"
 
 
   # The priority is based upon order of creation: first created -> highest priority.

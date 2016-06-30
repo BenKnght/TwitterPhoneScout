@@ -11,7 +11,7 @@
       <tr>                          
         <th>User:</th>
         <th>Following:</th>
-       <th>Phone:</th>
+        <th>Phone:</th>
         <th>Carrier:</th>
         <th>Phone Type:</th>
       </tr>
@@ -32,6 +32,7 @@
     <h1>
       <%= button_to "Add More", "/users/new", :method => "get" %>
       <%= button_to "Clear Database", "/users/confirmclear", :method => "get" %>
+      <%= button_to "View Table Statistics", "/users/getstats", :method => "get" %>
     </h1>
   </div>
 </div>

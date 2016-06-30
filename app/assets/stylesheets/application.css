@@ -42,6 +42,16 @@ html, body {
     text-align: left;
 }
 
+.stats {
+    width:1000px;
+    float:left;
+    padding:30px; 
+    color:#336699;
+    font-size: 20px;
+    text-align: left;
+}
+
+
 .button input {
   background-color: #f2580b;
   border: none;
