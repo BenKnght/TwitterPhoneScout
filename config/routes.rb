@@ -2,19 +2,14 @@ Rails.application.routes.draw do
   
   root to: 'users#new'
   
-
-  #resources :users
-
-
-  #get "/users" => "users#index"
   get "/users/new" => "users#new"
-  #get "/user/:id" => "users#show"
   post "/users" => "users#seek"
   get "/users/all" => "users#all", as: "users_all"
   get "/users/limit" => "users#limit", as: "users_limit"
-
-  #post '/' => 'users#seek'
-
+  get "/users/clear" => "users#clear"
+  get "/users/confirmclear" => "users#confirmclear"
+  get "/users/single/:id" => "users#single", as: "users_single"
+  get "/users/killone/:id" => "users#killone", as: "users_killone"
 
 
   # The priority is based upon order of creation: first created -> highest priority.

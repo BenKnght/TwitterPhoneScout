@@ -1,0 +1,17 @@
+<div class="header">
+  <div class="container">
+    <img src="http://pix.iemoji.com/images/emoji/apple/ios-9/256/baby-bottle.png" width="90">
+    <h1>Are you sure you want to clear your results?</h1>
+  </div>
+</div>
+
+<div class = "section">
+
+  <h1> This will empty your user database </h1> <br>
+  <div class="button">
+    <h1>
+      <%= button_to "Kill Them All", "/users/clear", :method => "get" %>
+      <%= button_to "Wait No", "/users/all", :method => "get" %>
+    </h1>
+  </div>
+</div>

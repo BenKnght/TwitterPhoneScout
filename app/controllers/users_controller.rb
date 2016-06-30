@@ -19,14 +19,16 @@ class UsersController < ApplicationController
       
       reqUrl = "https://api.twitter.com/1.1/followers/list.json?cursor=" + cursor + "&screen_name=" + @uname + "&count=200&skip_status=true&include_user_entities=false"
       
-      #Catch rate limit error if maxed
+      #Catch Twitter reference error
       begin 
         response = RestClient.get(reqUrl, reqPar)
       rescue
         if (validFound == 0)
-          User.create(:name => "**FLAG**", :following => ("No match for " + @uname), :phone => "N/A - Try different base", :carry => "N/A - Try different amount", :deviceType => "N/A - Thank you")
+          User.create(:name => "**FLAG**", :following => ("Tried " + @uname), :phone => "No match", :carry => "Vary search", :deviceType => "Thank you")
         end
-        User.create(:name => "**FLAG**", :following => ("Error on " + @uname), :phone => "N/A - Hit rate limit or invalid user", :carry => "N/A - Limit 24,000 followers/hour", :deviceType => "N/A - Thank you")
+        #This adds a flag user when rate limit is hit
+        #Doesn't really tell you anything you don't know, though
+        #User.create(:name => "**FLAG**", :following => ("Error " + @uname), :phone => "Rate or no user", :carry => "Limit 24000/hour", :deviceType => "Thank you")
         return redirect_to users_limit_path
       end
 
@@ -63,15 +65,33 @@ class UsersController < ApplicationController
 
     #Creates a flag user to let you know that no results were found
     if (validFound == 0)
-      User.create(:name => "**FLAG**", :following => ("No match for " + @uname), :phone => "N/A - Try different base", :carry => "N/A - Try different amount", :deviceType => "N/A - Thank you")
+      User.create(:name => "**FLAG**", :following => ("Tried " + @uname), :phone => "No match", :carry => "Vary search", :deviceType => "Thank you")
     end
 
-    redirect_to users_all_path
+    return redirect_to users_all_path
 
   end
 
   def all
     @users = User.all
+  end
+
+  def clear
+    User.destroy_all
+    return redirect_to "/users/new"
+  end
+
+  def confirmclear
+    #Everything in view
+  end
+
+  def single
+    @dude = User.find(params[:id])
+  end
+
+  def killone
+    User.destroy(params[:id])
+    return redirect_to "/users/all"
   end
 
 

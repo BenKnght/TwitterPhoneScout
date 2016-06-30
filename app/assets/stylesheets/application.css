@@ -33,7 +33,14 @@ html, body {
     color:#336699;
 }
 
-
+.boxy {
+    width:1000px;
+    float:left;
+    padding:30px; 
+    color:#336699;
+    font-size: 23px;
+    text-align: left;
+}
 
 .button input {
   background-color: #f2580b;
@@ -52,12 +59,13 @@ html, body {
 .header {
   background-color: #336699;
   height: 180px;
+  min-width: 1000px;
   text-align: center;
   vertical-align: center;
 }
 
 .header img {
-  margin: 8px 0 0 0;
+  margin: 10px 0 0 0;
 }
 
 .header h1 {
