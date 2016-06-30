@@ -34,7 +34,7 @@ html, body {
 }
 
 .boxy {
-    width:1000px;
+    width:1200px;
     float:left;
     padding:30px; 
     color:#336699;
@@ -47,7 +47,7 @@ html, body {
     float:left;
     padding:30px; 
     color:#336699;
-    font-size: 20px;
+    font-size: 30px;
     text-align: left;
 }
 
@@ -69,7 +69,7 @@ html, body {
 .header {
   background-color: #336699;
   height: 180px;
-  min-width: 1000px;
+  min-width: 1200px;
   text-align: center;
   vertical-align: center;
 }

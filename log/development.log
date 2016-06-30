@@ -15747,3 +15747,492 @@ Started GET "/users/new" for ::1 at 2016-06-30 15:09:09 -0400
 Processing by UsersController#new as HTML
   Rendered users/new.html.erb within layouts/application (1.2ms)
 Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2016-06-30 15:11:25 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 286ms (Views: 267.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 15:11:25 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-30 15:11:25 -0400
+
+
+Started GET "/assets/application.self-f4e88caa958957422a01a3d0c441f53a6f41d7851db9f32e9da6dbc7c63a75d4.css?body=1" for ::1 at 2016-06-30 15:11:25 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-30 15:11:25 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-30 15:11:25 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-30 15:11:25 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 15:11:25 -0400
+
+
+Started POST "/users" for ::1 at 2016-06-30 15:11:27 -0400
+Processing by UsersController#seek as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fuYvPy1Wo3FZWGbgm/ANbzTcJYxsTBV7Pw+YXGZ/MtDOKunY8SkBQ32EKNgwSmOHlA88QSmyEs0H1cxocTDTrA==", "name"=>"", "commit"=>"Converse"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("name", "following", "phone", "carry", "deviceType") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "**FLAG**"], ["following", "Tried "], ["phone", "No match"], ["carry", "Vary search"], ["deviceType", "Thank you"]]
+  [1m[35m (2.5ms)[0m  COMMIT
+Redirected to http://localhost:5000/users/limit
+Completed 302 Found in 137ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/users/limit" for ::1 at 2016-06-30 15:11:28 -0400
+Processing by UsersController#limit as HTML
+  Rendered users/limit.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 33ms (Views: 32.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/all" for ::1 at 2016-06-30 15:11:29 -0400
+Processing by UsersController#all as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/all.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/getstats" for ::1 at 2016-06-30 15:11:31 -0400
+Processing by UsersController#getstats as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/getstats.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 29ms (Views: 25.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/getstats" for ::1 at 2016-06-30 15:11:52 -0400
+Processing by UsersController#getstats as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/getstats.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 15:11:52 -0400
+
+
+Started GET "/assets/application.self-94bccab9d95d5033c529b61eb7649429e95dacae8afe146e68dc8ba3968baf51.css?body=1" for ::1 at 2016-06-30 15:11:52 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 15:11:52 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-30 15:11:52 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-30 15:11:52 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-30 15:11:52 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-30 15:11:52 -0400
+
+
+Started GET "/users/getstats" for ::1 at 2016-06-30 15:12:04 -0400
+Processing by UsersController#getstats as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/getstats.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 15:12:04 -0400
+
+
+Started GET "/assets/application.self-0969078b949ca54b8783697b51a6fbf5e5bb03c8960789e2415028d824d49c02.css?body=1" for ::1 at 2016-06-30 15:12:04 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-30 15:12:04 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-30 15:12:04 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 15:12:04 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-30 15:12:04 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-30 15:12:04 -0400
+
+
+Started GET "/users/getstats" for ::1 at 2016-06-30 15:13:36 -0400
+Processing by UsersController#getstats as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/getstats.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 26ms (Views: 14.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 15:13:36 -0400
+
+
+Started GET "/assets/application.self-0969078b949ca54b8783697b51a6fbf5e5bb03c8960789e2415028d824d49c02.css?body=1" for ::1 at 2016-06-30 15:13:36 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-30 15:13:36 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-30 15:13:36 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-30 15:13:36 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-30 15:13:36 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 15:13:36 -0400
+
+
+Started GET "/users/all" for ::1 at 2016-06-30 15:13:39 -0400
+Processing by UsersController#all as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/all.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for ::1 at 2016-06-30 15:13:41 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2016-06-30 15:13:44 -0400
+Processing by UsersController#seek as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5fXjxUYLAJCpHRqBT7Erd51RGdjjbE60fcskv4FEg9dVOSUimnSioo3BVLnkC0WfPYIAFaaSSQJFEXCLlgtiqw==", "name"=>"blakeir", "commit"=>"Converse"}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "blastchatbleez"], ["following", "blakeir"], ["phone", "(551) 804-7174"], ["carry", "Sprint Spectrum, L.P."], ["deviceType", "mobile"]]
+  [1m[36m (1.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("name", "following", "phone", "carry", "deviceType") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "ChipotleBot"], ["following", "blakeir"], ["phone", "(424) 373-7626"], ["carry", "Twilio"], ["deviceType", "voip"]]
+  [1m[35m (1.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "SuperPhone"], ["following", "blakeir"], ["phone", "(646) 576-7048"], ["carry", "Twilio"], ["deviceType", "voip"]]
+  [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("name", "following", "phone", "carry", "deviceType") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "CallumJBooker"], ["following", "blakeir"], ["phone", "(607) 434-7166"], ["carry", "Verizon Wireless"], ["deviceType", "mobile"]]
+  [1m[35m (1.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "video_meeting"], ["following", "blakeir"], ["phone", "(855) 879-8433"], ["carry", ""], ["deviceType", "landline"]]
+  [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "following", "phone", "carry", "deviceType") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "staelenslock"], ["following", "blakeir"], ["phone", "(734) 224-2824"], ["carry", "Twilio"], ["deviceType", "voip"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "RocketFiber"], ["following", "blakeir"], ["phone", "(844) 847-6253"], ["carry", ""], ["deviceType", "landline"]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "following", "phone", "carry", "deviceType") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "getitEazy"], ["following", "blakeir"], ["phone", "(512) 213-0883"], ["carry", "Twilio"], ["deviceType", "voip"]]
+  [1m[35m (1.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "chrisamccoy"], ["following", "blakeir"], ["phone", "(415) 915-8574"], ["carry", "Twilio"], ["deviceType", "voip"]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:5000/users/all
+Completed 302 Found in 6968ms (ActiveRecord: 17.9ms)
+
+
+Started POST "/users" for ::1 at 2016-06-30 15:13:51 -0400
+Processing by UsersController#seek as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5fXjxUYLAJCpHRqBT7Erd51RGdjjbE60fcskv4FEg9dVOSUimnSioo3BVLnkC0WfPYIAFaaSSQJFEXCLlgtiqw==", "name"=>"bubba", "commit"=>"Converse"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "following", "phone", "carry", "deviceType") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "patiencehaggin"], ["following", "bubba"], ["phone", "(415) 518-3313"], ["carry", "AT&T Wireless"], ["deviceType", "mobile"]]
+  [1m[35m (1.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "rhondawalton1"], ["following", "bubba"], ["phone", "(360) 574-1148"], ["carry", "T-Mobile USA, Inc."], ["deviceType", "mobile"]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "following", "phone", "carry", "deviceType") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "ArnauGavalda"], ["following", "bubba"], ["phone", "645 79 20 29"], ["carry", "France Telecom (Orange) Espana"], ["deviceType", "mobile"]]
+  [1m[35m (1.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "BigCityFMBoston"], ["following", "bubba"], ["phone", "(617) 282-0062"], ["carry", "Vonage Network Inc."], ["deviceType", "landline"]]
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "following", "phone", "carry", "deviceType") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "ApexCompu"], ["following", "bubba"], ["phone", "(610) 695-0695"], ["carry", "Broadvox-CLEC SMSEnabled"], ["deviceType", "voip"]]
+  [1m[35m (1.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "ERGO_INSTALLERS"], ["following", "bubba"], ["phone", "(240) 764-6143"], ["carry", "Comcast"], ["deviceType", "landline"]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "following", "phone", "carry", "deviceType") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "DC_ASSEMBLERS"], ["following", "bubba"], ["phone", "(240) 764-6143"], ["carry", "Comcast"], ["deviceType", "landline"]]
+  [1m[35m (1.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "socialstartnow"], ["following", "bubba"], ["phone", "(321) 536-3485"], ["carry", "AT&T Wireless"], ["deviceType", "mobile"]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "following", "phone", "carry", "deviceType") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "GailRanieri"], ["following", "bubba"], ["phone", "(630) 470-8164"], ["carry", "Sprint Spectrum, L.P."], ["deviceType", "mobile"]]
+  [1m[35m (1.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "bel_creation"], ["following", "bubba"], ["phone", "31 22 4504"], ["carry", "Unigestion Holding (Digicel)"], ["deviceType", "mobile"]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("name", "following", "phone", "carry", "deviceType") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "limosfvip"], ["following", "bubba"], ["phone", "(415) 488-8898"], ["carry", "Twilio"], ["deviceType", "voip"]]
+  [1m[35m (1.3ms)[0m  COMMIT
+Redirected to http://localhost:5000/users/all
+Completed 302 Found in 14029ms (ActiveRecord: 21.3ms)
+
+
+Started GET "/users/all" for ::1 at 2016-06-30 15:14:05 -0400
+Processing by UsersController#all as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/all.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for ::1 at 2016-06-30 15:14:54 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 15:14:54 -0400
+
+
+Started GET "/assets/application.self-2c282dca17ff0d5af1f0d66233d0b5d276784c613e82da14971aa58edcbc2763.css?body=1" for ::1 at 2016-06-30 15:14:54 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-30 15:14:54 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-30 15:14:54 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-30 15:14:54 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-30 15:14:54 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 15:14:54 -0400
+
+
+Started POST "/users" for ::1 at 2016-06-30 15:15:02 -0400
+Processing by UsersController#seek as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RtdmjXDsyTLJcPyRPP75vkNNyYCaa159OW9DUKdizjX2G6BqrJNrAO2ssqmXRJdW457QTd+VWcsBtRdksC0vSQ==", "name"=>"", "commit"=>"Converse"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "following", "phone", "carry", "deviceType") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "*FLAG*"], ["following", "*Tried *"], ["phone", "*No match*"], ["carry", "*Vary search*"], ["deviceType", "*Thank you*"]]
+  [1m[35m (2.2ms)[0m  COMMIT
+Redirected to http://localhost:5000/users/limit
+Completed 302 Found in 168ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/users/limit" for ::1 at 2016-06-30 15:15:02 -0400
+Processing by UsersController#limit as HTML
+  Rendered users/limit.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/all" for ::1 at 2016-06-30 15:15:07 -0400
+Processing by UsersController#all as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/all.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/all" for ::1 at 2016-06-30 15:16:11 -0400
+Processing by UsersController#all as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/all.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 32ms (Views: 25.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-30 15:16:11 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-30 15:16:11 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-30 15:16:11 -0400
+
+
+Started GET "/assets/application.self-2c282dca17ff0d5af1f0d66233d0b5d276784c613e82da14971aa58edcbc2763.css?body=1" for ::1 at 2016-06-30 15:16:11 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-30 15:16:11 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-30 15:16:11 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-30 15:16:11 -0400
+
+
+Started GET "/users/confirmclear" for ::1 at 2016-06-30 15:16:27 -0400
+Processing by UsersController#confirmclear as HTML
+  Rendered users/confirmclear.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/all" for ::1 at 2016-06-30 15:16:29 -0400
+Processing by UsersController#all as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/all.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/confirmclear" for ::1 at 2016-06-30 15:16:32 -0400
+Processing by UsersController#confirmclear as HTML
+  Rendered users/confirmclear.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/clear" for ::1 at 2016-06-30 15:16:33 -0400
+Processing by UsersController#clear as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 46]]
+  [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 47]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 48]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 49]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 51]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 52]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 55]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 56]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 57]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 58]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 59]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 60]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 61]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 62]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 63]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 64]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 65]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 66]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 67]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 68]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 69]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 70]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 71]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 72]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 73]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 74]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 75]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 76]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 77]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 78]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 79]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 80]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 81]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 82]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 83]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 84]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 85]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 86]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 87]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 88]]
+  [1m[35m (0.2ms)[0m  COMMIT
+Redirected to http://localhost:5000/users/new
+Completed 302 Found in 38ms (ActiveRecord: 18.9ms)
+
+
+Started GET "/users/new" for ::1 at 2016-06-30 15:16:33 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2016-06-30 15:16:37 -0400
+Processing by UsersController#seek as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tf2vEXkgNb5NowucpkmayQW+J8yTK0mkmoKa8c0sPez9MWn2pV+XjGl/RaQN8/QhpW0+AdbVThKiWM7F2mPckA==", "name"=>"", "commit"=>"Converse"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "*FLAG*"], ["following", "**"], ["phone", "*No match*"], ["carry", "*Vary search*"], ["deviceType", "*Thanks*"]]
+  [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:5000/users/limit
+Completed 302 Found in 162ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/users/limit" for ::1 at 2016-06-30 15:16:37 -0400
+Processing by UsersController#limit as HTML
+  Rendered users/limit.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/all" for ::1 at 2016-06-30 15:16:39 -0400
+Processing by UsersController#all as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/all.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.3ms)

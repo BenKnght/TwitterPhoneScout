@@ -24,7 +24,7 @@ class UsersController < ApplicationController
         response = RestClient.get(reqUrl, reqPar)
       rescue
         if (validFound == 0)
-          User.create(:name => "**FLAG**", :following => ("Tried " + @uname), :phone => "No match", :carry => "Vary search", :deviceType => "Thank you")
+          User.create(:name => "*FLAG*", :following => ("*" + @uname + "*"), :phone => "*No match*", :carry => "*Vary search*", :deviceType => "*Thanks*")
         end
         #This adds a flag user when rate limit is hit
         #Doesn't really tell you anything you don't know, though
@@ -65,7 +65,7 @@ class UsersController < ApplicationController
 
     #Creates a flag user to let you know that no results were found
     if (validFound == 0)
-      User.create(:name => "**FLAG**", :following => ("Tried " + @uname), :phone => "No match", :carry => "Vary search", :deviceType => "Thank you")
+      User.create(:name => "*FLAG*", :following => ("*" + @uname + "*"), :phone => "*No match*", :carry => "*Vary search*", :deviceType => "*Thanks*")
     end
 
     return redirect_to users_all_path

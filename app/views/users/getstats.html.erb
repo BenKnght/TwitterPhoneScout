@@ -10,10 +10,12 @@
     <table cellspacing="15">                         
       <tr>                          
         <th>Carriers:</th>
+        <th>Count:</th>
       </tr> 
       <% @carriers.each do |key, val| %>   
         <tr>
-          <td><%= "#{key} : #{val}" %></td> 
+          <td><%= "#{key}" %></td> 
+          <td><%= "#{val}" %></td> 
         </tr>
       <% end %>  
   </table>
@@ -23,10 +25,12 @@
     <table cellspacing="15">                         
       <tr>                          
         <th>Device Types:</th>
+        <th>Count:</th>
       </tr> 
       <% @types.each do |key, val| %>   
         <tr>
-          <td><%= "#{key} : #{val}" %></td> 
+          <td><%= "#{key}" %></td> 
+          <td><%= "#{val}" %></td>
         </tr>
       <% end %>  
   </table>
