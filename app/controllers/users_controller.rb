@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
 
 	def new 
+    #This only reads in a name string
+    #It doesn't need to be a full user because this user is never saved
+    #This was easier to write than jsut getting a string
 		@user = User.new
 	end
 
