@@ -18,10 +18,10 @@ $lookup_client = Twilio::REST::LookupsClient.new twilSID, twilTok
 
 
 #These are Phone Scout specific Twitter access credentials -- DONT CHANGE
-cKey      = "ddn7p7gNZGvO5193GGilWTeW4"
-cSec      = "dnRZW4IChVL4bNgBSUE0C2ees8sN7PWvfUg3iQcVl8Iun8g7WG"
-aTok      = "941850966-k9gNxw8TmeXjunOSIpnqlWb9fiTaIhY1KfB5lvzG"
-aSec 	    = "VLVo41nSMLMCuVU3qfpHLkYzb4jgdtUFQSp0wUYD2Iw2X"
+cKey      = "S4KH3QimDeQX2noM01Ev5cbNN"
+cSec      = "CPXZZm2apHWr1X9GT4yF8YaJzeqBd8aEPJFLfCkz4Q4pWoHpN8"
+aTok      = "941850966-wKWATXuTvkyFg77icyrOjXock9QuxtM5SqsCDzzk"
+aSec 	  = "Z6GSP8qoCfKJeVORUeEAikcP9cMKTu5Vb6YZ4wO67t856"
 
 #This process uses the above credentials to secure a 'bearer token' 
 #A unique token is gathered every time the program is run because these tokens are subject to change
