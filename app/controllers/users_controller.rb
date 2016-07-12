@@ -14,7 +14,7 @@ class UsersController < ApplicationController
       logged_in = 1
     else 
       #Exactly one of these should always exist
-      @cur = ( Guest.where(:guest_name => "*Anonymous*").take(1) )[0]
+      @cur = ( Guest.where(:guest_name => '*Anonymous*').take(1) )[0]
       logged_in = 0
     end
 

@@ -46,7 +46,7 @@ RestClient.post("https://api.twitter.com/oauth2/token/", 'grant_type=client_cred
 end
 
 # Define filler, anonoumous guest 
-unless Guest.exists?(:guest_name => "*Anonymous*")
+unless Guest.exists?(:guest_name => '*Anonymous*')
 	Guest.create(:provider => "twitter", :uid => "*none*", :guest_name => "*Anonymous*", :token => "*none*", :secret => "*none")
 end
 

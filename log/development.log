@@ -23300,3 +23300,4 @@ Processing by UsersController#all as HTML
   [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
   Rendered users/all.html.erb within layouts/application (4.3ms)
 Completed 200 OK in 29ms (Views: 28.2ms | ActiveRecord: 0.5ms)
+  [1m[36mGuest Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "guests" WHERE "guests"."guest_name" = $1 LIMIT 1[0m  [["guest_name", "*Anonymous*"]]
