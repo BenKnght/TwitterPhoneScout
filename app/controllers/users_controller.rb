@@ -9,6 +9,17 @@ class UsersController < ApplicationController
 
 	def seek
 
+    if current_guest
+      @cur = Guest.find_by_id(session[:guest_id]) 
+      logged_in = 1
+    else 
+      #Exactly one of these should always exist
+      @cur = Guest.find_by(guest_name: "*Anonymous*")
+      logged_in = 0
+    end
+
+    @seek_users = []
+
     @uname = params["name"]
 
     reqPar = {}
@@ -27,7 +38,9 @@ class UsersController < ApplicationController
         response = RestClient.get(reqUrl, reqPar)
       rescue
         if (validFound == 0)
-          User.create(:name => "*FLAG*", :following => ("*" + @uname + "*"), :phone => "*No match*", :carry => "*Vary search*", :deviceType => "*Thanks*")
+          temp = User.create(:name => "*FLAG*", :following => ("*" + @uname + "*"), :phone => "*No match*", :carry => "*Vary search*", :deviceType => "*Thanks*", :guest_name => @cur.guest_name)
+          @cur.users << temp
+          @seek_users << temp
         end
         #This adds a flag user when rate limit is hit
         #Doesn't really tell you anything you don't know, though
@@ -51,7 +64,9 @@ class UsersController < ApplicationController
             carrierName = twil.carrier["name"].to_s
             carrierType = twil.carrier["type"].to_s
             phoneNum = (twil.national_format).to_s
-            User.create(:name => u["screen_name"].to_s, :following => @uname, :phone => phoneNum, :carry => carrierName, :deviceType => carrierType)
+            temp = User.create(:name => u["screen_name"].to_s, :following => @uname, :phone => phoneNum, :carry => carrierName, :deviceType => carrierType, :guest_name => @cur.guest_name)
+            @cur.users << temp
+            @seek_users << temp
             validFound = 1
           rescue
             #If no or invalid phone, do nothing
@@ -68,10 +83,10 @@ class UsersController < ApplicationController
 
     #Creates a flag user to let you know that no results were found
     if (validFound == 0)
-      User.create(:name => "*FLAG*", :following => ("*" + @uname + "*"), :phone => "*No match*", :carry => "*Vary search*", :deviceType => "*Thanks*")
+      temp = User.create(:name => "*FLAG*", :following => ("*" + @uname + "*"), :phone => "*No match*", :carry => "*Vary search*", :deviceType => "*Thanks*", :guest_name => @cur.guest_name)
+      @cur.users << temp
+      @seek_users << temp
     end
-
-    return redirect_to users_all_path
 
   end
 
@@ -79,8 +94,14 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+  def local
+    temp = Guest.find_by_id(session[:guest_id])
+    @local_users = User.where(:guest_name => temp.guest_name)
+  end
+
   def clear
-    User.destroy_all
+    temp = Guest.find_by_id(session[:guest_id])
+    User.where(:guest_name => temp.guest_name).destroy_all
     return redirect_to "/users/new"
   end
 
@@ -92,9 +113,13 @@ class UsersController < ApplicationController
     @dude = User.find(params[:id])
   end
 
+  def singleglobal
+    @global_dude = User.find(params[:id])
+  end
+
   def killone
     User.destroy(params[:id])
-    return redirect_to "/users/all"
+    return redirect_to "/users/local"
   end
 
   def getstats
@@ -116,6 +141,32 @@ class UsersController < ApplicationController
         @types[d] += 1
       else
         @types[d] = 1
+      end
+
+    end
+
+  end
+
+  def getlocalstats
+    @local_carriers = {}
+    @local_types = {}
+    temp = Guest.find_by_id(session[:guest_id])
+    all = User.where(:guest_name => temp.guest_name)
+
+    all.each do |u|
+      c = (u.carry).to_sym
+      d = (u.deviceType).to_sym
+
+      if @local_carriers.key?(c)
+        @local_carriers[c] += 1
+      else
+        @local_carriers[c] = 1
+      end
+
+      if @local_types.key?(d)
+        @local_types[d] += 1
+      else
+        @local_types[d] = 1
       end
 
     end

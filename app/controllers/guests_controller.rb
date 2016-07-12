@@ -1,5 +1,9 @@
-class GuestController < ApplicationController
+class GuestsController < ApplicationController
 
+# This process isn't used anymore because I now use the omniauth gem
+# The code below manually requests indivual user access tokens from Twitter
+
+=begin
 	def new
 
 		cSec = "dnRZW4IChVL4bNgBSUE0C2ees8sN7PWvfUg3iQcVl8Iun8g7WG"
@@ -48,8 +52,7 @@ class GuestController < ApplicationController
 		end
 
 	end
-
-
+=end 
 
 
 end

@@ -12,6 +12,13 @@ Rails.application.routes.draw do
   get "/users/killone/:id" => "users#killone", as: "users_killone"
   get "/users/getstats" => "users#getstats"
 
+  get "/users/local" => "users#local"
+  get "/users/getlocalstats" => "users#getlocalstats"
+  get "/users/singleglobal/:id" => "users#singleglobal", as: "users_singleglobal"
+
+  get "/auth/:provider/callback" => "sessions#create"
+  get "/logout" => "sessions#destroy", as: :logout
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

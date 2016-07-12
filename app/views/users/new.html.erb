@@ -2,9 +2,12 @@
   <div class="container">
     <img src="http://pix.iemoji.com/images/emoji/apple/ios-9/256/baby-bottle.png" width="90">
     <h1>Welcome to Phone Scout. Enter a base user's Twitter handle to track a conversation.</h1>
+    <% if current_guest %>
+      </br>
+      <h2> Signed in as <%= current_guest.guest_name %> </h2>
+    <% end %>
   </div>
 </div>
-
 
 <div class="section">
   <h2>  
@@ -15,6 +18,18 @@
         <%= submit_tag "Converse" %>
       </p>
     <% end %>
+  </h2>
+
+  </br>
+
+  <h2 class="button">
+      <% if current_guest %>
+        <%= button_to "Sign Out", "/logout", :method => "get" %>
+        <%= button_to "View Your Data", "/users/local", :method => "get" %>
+      <% else %>
+        <%= button_to "Sign In", "/auth/twitter", :method => "get" %>
+      <% end %>
+      <%= button_to "View Global Data", "/users/all", :method => "get" %>
   </h2>
 </div>
 

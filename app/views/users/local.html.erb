@@ -1,0 +1,45 @@
+<div class="header">
+  <div class="container">
+    <img src="http://pix.iemoji.com/images/emoji/apple/ios-9/256/baby-bottle.png" width="90">
+    <h1>Here's everything you have searched.</h1>
+    <% if current_guest %>
+      </br>
+      <h2> Signed in as <%= current_guest.guest_name %> </h2>
+    <% end %>
+  </div>
+</div>
+
+
+<div class="boxy">
+    <table cellspacing="15">                         
+      <tr>                          
+        <th>User:</th>
+        <th>Following:</th>
+        <th>Phone:</th>
+        <th>Carrier:</th>
+        <th>Phone Type:</th>
+        <th>Requested By:</th>
+      </tr>
+    <% @local_users.each do |user| %>       
+      <tr>
+        <td><%= link_to user.name, users_single_path(user) %></td>  
+        <td><%= user.following %></td>
+        <td><%= user.phone %></td> 
+        <td><%= user.carry %></td> 
+        <td><%= user.deviceType %></td>
+        <td><%= user.guest_name %></td>  
+      </tr>
+    <% end %>                    
+  </table>
+</div>
+
+<div class="list">
+  <div class="button">
+    <h1>
+      <%= button_to "Add More", "/users/new", :method => "get" %>
+      <%= button_to "View Global Database", "/users/all", :method => "get" %>
+      <%= button_to "Clear Your Database", "/users/confirmclear", :method => "get" %>
+      <%= button_to "View Table Statistics", "/users/getlocalstats", :method => "get" %>
+    </h1>
+  </div>
+</div>

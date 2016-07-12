@@ -34,7 +34,7 @@ html, body {
 }
 
 .boxy {
-    width:1200px;
+    width:1350px;
     float:left;
     padding:30px; 
     color:#336699;
@@ -49,6 +49,20 @@ html, body {
     color:#336699;
     font-size: 30px;
     text-align: left;
+}
+
+.subtitle {
+  background-color: #336699;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 10px;
+  padding: 12px 24px;
+  transition: background-color 0.5s;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
 }
 
 
@@ -68,8 +82,8 @@ html, body {
 
 .header {
   background-color: #336699;
-  height: 180px;
-  min-width: 1200px;
+  height: 220px;
+  min-width: 1350px;
   text-align: center;
   vertical-align: center;
 }
@@ -84,6 +98,14 @@ html, body {
   margin: 0;
   vertical-align: center;
 }
+
+.header h2 {
+  color: #fff;
+  font-size: 15px;
+  margin: 0;
+  vertical-align: center;
+}
+
 
 .user h2 {
   color: #33E9FF;
@@ -104,7 +126,7 @@ h2 a {
 }
 
 .container h2 {
-  color: #33E9FF;
+  color: #fff;
 }
 
 .card {

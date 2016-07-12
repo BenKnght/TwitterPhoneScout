@@ -1,7 +1,11 @@
 <div class="header">
   <div class="container">
     <img src="http://pix.iemoji.com/images/emoji/apple/ios-9/256/baby-bottle.png" width="90">
-    <h1>Here's some tallies from your database.</h1>
+    <h1>Here's some tallies from the global database.</h1>
+    <% if current_guest %>
+      </br>
+      <h2> Signed in as <%= current_guest.guest_name %> </h2>
+    <% end %>
   </div>
 </div>
 

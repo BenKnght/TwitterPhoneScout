@@ -2,6 +2,10 @@
   <div class="container">
     <img src="http://pix.iemoji.com/images/emoji/apple/ios-9/256/baby-bottle.png" width="90">
     <h1>Something's Happened. Either the username isn't real or we've hit Twitter's rate limit</h1>
+    <% if current_guest %>
+      </br>
+      <h2> Signed in as <%= current_guest.guest_name %> </h2>
+    <% end %>
   </div>
 </div>
 
@@ -11,7 +15,10 @@
   <div class="button">
     <h1>
       <%= button_to "Back to Base User", "/users/new", :method => "get" %>
-      <%= button_to "View Current Matches", "/users/all", :method => "get" %>
+      <% if current_guest %>
+        <%= button_to "View All Your Data", "/users/local", :method => "get" %>
+      <% end %>
+      <%= button_to "View Current Global Data", "/users/all", :method => "get" %>
     </h1>
   </div>
 </div>

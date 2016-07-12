@@ -18,14 +18,14 @@ $lookup_client = Twilio::REST::LookupsClient.new twilSID, twilTok
 
 
 #These are Phone Scout specific Twitter access credentials -- DONT CHANGE
-cKey      = "S4KH3QimDeQX2noM01Ev5cbNN"
-cSec      = "CPXZZm2apHWr1X9GT4yF8YaJzeqBd8aEPJFLfCkz4Q4pWoHpN8"
-aTok      = "941850966-wKWATXuTvkyFg77icyrOjXock9QuxtM5SqsCDzzk"
-aSec 	  = "Z6GSP8qoCfKJeVORUeEAikcP9cMKTu5Vb6YZ4wO67t856"
+$cKey      = "S4KH3QimDeQX2noM01Ev5cbNN"
+$cSec      = "CPXZZm2apHWr1X9GT4yF8YaJzeqBd8aEPJFLfCkz4Q4pWoHpN8"
+$aTok      = "941850966-wKWATXuTvkyFg77icyrOjXock9QuxtM5SqsCDzzk"
+$aSec 	  = "Z6GSP8qoCfKJeVORUeEAikcP9cMKTu5Vb6YZ4wO67t856"
 
 #This process uses the above credentials to secure a 'bearer token' 
 #A unique token is gathered every time the program is run because these tokens are subject to change
-bearCred = cKey + ":" + cSec
+bearCred = $cKey + ":" + $cSec
 encCred = Base64.strict_encode64(bearCred)
 
 res = RestClient::Resource.new "https://api.twitter.com/oauth2/token/"
@@ -45,6 +45,10 @@ RestClient.post("https://api.twitter.com/oauth2/token/", 'grant_type=client_cred
     $bearTok =  (JSON.parse(response))["access_token"]
 end
 
+# Define filler, anonoumous guest 
+unless Guest.exists?(:guest_name => "*Anonymous*")
+	Guest.create(:provider => "twitter", :uid => "*none*", :guest_name => "*Anonymous*", :token => "*none*", :secret => "*none")
+end
 
 
 #This is the old way of tapping the Twitter API

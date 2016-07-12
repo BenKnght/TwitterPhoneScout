@@ -6,7 +6,7 @@ class CreateUsers < ActiveRecord::Migration
       t.text :phone
       t.text :carry
       t.text :deviceType
-      #t.timestamps null: false
+      t.timestamps null: false
     end
   end
 end

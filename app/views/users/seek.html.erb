@@ -1,24 +1,47 @@
 <div class="header">
   <div class="container">
-    <img src="http://pix.iemoji.com/images/emoji/apple/ios-9/256/baby-bottle.png" width="80">
+    <img src="http://pix.iemoji.com/images/emoji/apple/ios-9/256/baby-bottle.png" width="90">
     <h1>Here's people talking about the same things.</h1>
+    <% if current_guest %>
+      </br>
+      <h2> Signed in as <%= current_guest.guest_name %> </h2>
+    <% end %>
   </div>
 </div>
 
 
-<div>
-  <h2>  
+<div class="boxy">
+    <table cellspacing="15">                         
+      <tr>                          
+        <th>User:</th>
+        <th>Following:</th>
+        <th>Phone:</th>
+        <th>Carrier:</th>
+        <th>Phone Type:</th>
+        <th>Requested By:</th>
+      </tr>
+    <% @seek_users.each do |user| %>       
+      <tr>
+        <td><%= user.name %></td>  
+        <td><%= user.following %></td>
+        <td><%= user.phone %></td> 
+        <td><%= user.carry %></td> 
+        <td><%= user.deviceType %></td>
+        <td><%= user.guest_name %></td>  
+      </tr>
+    <% end %>                    
+  </table>
+</div>
 
-  	<% @users.each do |user| %>
-   		<div class="User">
-   			<p> <%= "user.name" %> </p>
-      		<p> <%= user.name %> </p>
-      		<p><%= user.phone %></p>
-      		<p><%= user.carry %></p>
-      		<p><%= user.deviceType %></p>
-        </div>
-   <%end%>
-
-  </h2>
+<div class="list">
+  <div class="button">
+    <h1>
+      <%= button_to "Search Again", "/users/new", :method => "get" %>
+      <% if current_guest %>
+        <%= button_to "View All Your Data", "/users/local", :method => "get" %>
+      <% end %>
+      <%= button_to "View Global Data", "/users/all", :method => "get" %>
+    </h1>
+  </div>
 </div>
 
