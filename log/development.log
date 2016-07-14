@@ -19863,3 +19863,256 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
+  [1m[36mGuest Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "guests" WHERE "guests"."guestname" = $1 LIMIT 1[0m  [["guestname", "*Anonymous*"]]
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-14 15:18:29 -0500
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by UsersController#new as HTML
+  [1m[36mGuest Load (0.4ms)[0m  [1mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered users/new.html.erb within layouts/application (495.5ms)
+Completed 200 OK in 701ms (Views: 678.9ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/assets/guest.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-14 15:18:30 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-14 15:18:30 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-14 15:18:30 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-14 15:18:30 -0500
+
+
+Started GET "/assets/application.self-bad3a51133d89d05dd49738b895be1fb567a0b7a99731d5fb6e9134df80c0cfa.css?body=1" for 127.0.0.1 at 2016-07-14 15:18:30 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-14 15:18:30 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-07-14 15:18:30 -0500
+
+
+Started GET "/assets/guest.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-07-14 15:18:30 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-07-14 15:18:30 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-07-14 15:18:30 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-07-14 15:18:30 -0500
+
+
+Started POST "/users" for 127.0.0.1 at 2016-07-14 15:18:35 -0500
+Processing by UsersController#seek as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rtlAvndC+D65vMTLaXvHqYaOr3xI9VWaCP72Qu3k80yA1EsUpbx/SXmvO5wJD+LzXb825pjtegT+twQyb0iyNQ==", "name"=>"magicman", "commit"=>"Converse"}
+  [1m[35mGuest Load (0.5ms)[0m  SELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("name", "following", "phone", "carry", "deviceType", "searchedguest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "*FLAG*"], ["following", "*magicman*"], ["phone", "*No match*"], ["carry", "*Vary search*"], ["deviceType", "*Thanks*"], ["searchedguest", "Ben Knight"], ["created_at", "2016-07-14 20:18:40.524833"], ["updated_at", "2016-07-14 20:18:40.524833"]]
+  [1m[35m (1.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "guest_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["guest_id", 2], ["updated_at", "2016-07-14 20:18:40.550673"], ["id", 44]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  Rendered users/seek.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 5437ms (Views: 14.8ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/users/all" for 127.0.0.1 at 2016-07-14 15:18:45 -0500
+Processing by UsersController#all as HTML
+  [1m[35mGuest Load (0.5ms)[0m  SELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/all.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 23ms (Views: 21.4ms | ActiveRecord: 0.8ms)
+  [1m[36mGuest Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "guests" WHERE "guests"."guestname" = $1 LIMIT 1[0m  [["guestname", "*Anonymous*"]]
+
+
+Started GET "/users/all" for 127.0.0.1 at 2016-07-14 15:20:44 -0500
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by UsersController#all as HTML
+  [1m[36mGuest Load (0.3ms)[0m  [1mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/all.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 344ms (Views: 309.8ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/users/singleglobal/3" for 127.0.0.1 at 2016-07-14 15:20:46 -0500
+Processing by UsersController#singleglobal as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mGuest Load (0.3ms)[0m  SELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered users/singleglobal.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/all" for 127.0.0.1 at 2016-07-14 15:20:48 -0500
+Processing by UsersController#all as HTML
+  [1m[36mGuest Load (0.4ms)[0m  [1mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/all.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.7ms)
+  [1m[36mGuest Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "guests" WHERE "guests"."guestname" = $1 LIMIT 1[0m  [["guestname", "*Anonymous*"]]
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-14 18:10:29 -0500
+  [1m[35mActiveRecord::SchemaMigration Load (0.6ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by UsersController#new as HTML
+  [1m[36mGuest Load (0.5ms)[0m  [1mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered users/new.html.erb within layouts/application (559.4ms)
+Completed 200 OK in 820ms (Views: 789.8ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2016-07-14 18:10:43 -0500
+Processing by SessionsController#destroy as HTML
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-14 18:10:43 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 24ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/all" for 127.0.0.1 at 2016-07-14 18:10:51 -0500
+Processing by UsersController#all as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/all.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-07-14 18:10:56 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2016-07-14 18:10:58 -0500
+
+
+Started GET "/auth/twitter/callback?oauth_token=AoFnBAAAAAAAvwciAAABVeutbJ4&oauth_verifier=saNWaEpNku1GnRW7IPEZ530PrFhAvss2" for 127.0.0.1 at 2016-07-14 18:10:59 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"AoFnBAAAAAAAvwciAAABVeutbJ4", "oauth_verifier"=>"saNWaEpNku1GnRW7IPEZ530PrFhAvss2", "provider"=>"twitter"}
+  [1m[36mGuest Load (1.2ms)[0m  [1mSELECT  "guests".* FROM "guests" WHERE "guests"."provider" = $1 AND "guests"."uid" = $2  ORDER BY "guests"."id" ASC LIMIT 1[0m  [["provider", "twitter"], ["uid", "941850966"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 10ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-14 18:11:00 -0500
+Processing by UsersController#new as HTML
+  [1m[35mGuest Load (0.4ms)[0m  SELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered users/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/local" for 127.0.0.1 at 2016-07-14 18:11:09 -0500
+Processing by UsersController#local as HTML
+  [1m[36mGuest Load (0.3ms)[0m  [1mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."searchedguest" = $1[0m  [["searchedguest", "Ben Knight"]]
+  Rendered users/local.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 25ms (Views: 22.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-07-14 18:11:11 -0500
+Processing by UsersController#new as HTML
+  [1m[35mGuest Load (0.9ms)[0m  SELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered users/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 28ms (Views: 26.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-07-14 18:11:15 -0500
+Processing by UsersController#seek as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gvh6HzV0BxqYVMa1eXQLwcqGZjE5ajG5LbvJIyyrejA09XG154qAbVhHOeIZAC6bEbf/q+lyHifb8jtTrgc7SQ==", "name"=>"Mazzeo", "commit"=>"Converse"}
+  [1m[36mGuest Load (0.4ms)[0m  [1mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (6.9ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType", "searchedguest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["name", "footpr1nt"], ["following", "Mazzeo"], ["phone", "(415) 915-8574"], ["carry", "Twilio"], ["deviceType", "voip"], ["searchedguest", "Ben Knight"], ["created_at", "2016-07-14 23:11:17.462897"], ["updated_at", "2016-07-14 23:11:17.462897"]]
+  [1m[36m (107.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "users" SET "guest_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["guest_id", 2], ["updated_at", "2016-07-14 23:11:17.601794"], ["id", 45]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType", "searchedguest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["name", "GovInvestInc"], ["following", "Mazzeo"], ["phone", "(213) 534-6798"], ["carry", "Google (Grand Central) BWI"], ["deviceType", "voip"], ["searchedguest", "Ben Knight"], ["created_at", "2016-07-14 23:11:17.801215"], ["updated_at", "2016-07-14 23:11:17.801215"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "guest_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["guest_id", 2], ["updated_at", "2016-07-14 23:11:17.803778"], ["id", 46]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType", "searchedguest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["name", "anthrony_"], ["following", "Mazzeo"], ["phone", "(831) 320-7100"], ["carry", "Verizon Wireless"], ["deviceType", "mobile"], ["searchedguest", "Ben Knight"], ["created_at", "2016-07-14 23:11:18.488722"], ["updated_at", "2016-07-14 23:11:18.488722"]]
+  [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "users" SET "guest_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["guest_id", 2], ["updated_at", "2016-07-14 23:11:18.492488"], ["id", 47]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType", "searchedguest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["name", "CaseyNeistatAl"], ["following", "Mazzeo"], ["phone", "(256) 415-7083"], ["carry", "Google (Grand Central) BWI"], ["deviceType", "voip"], ["searchedguest", "Ben Knight"], ["created_at", "2016-07-14 23:11:19.238764"], ["updated_at", "2016-07-14 23:11:19.238764"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "guest_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["guest_id", 2], ["updated_at", "2016-07-14 23:11:19.242964"], ["id", 48]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType", "searchedguest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["name", "inbizusa"], ["following", "Mazzeo"], ["phone", "(786) 548-3622"], ["carry", "Ymax Communications Corp."], ["deviceType", "landline"], ["searchedguest", "Ben Knight"], ["created_at", "2016-07-14 23:11:21.444343"], ["updated_at", "2016-07-14 23:11:21.444343"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "guest_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["guest_id", 2], ["updated_at", "2016-07-14 23:11:21.446632"], ["id", 49]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType", "searchedguest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["name", "DayTraders1"], ["following", "Mazzeo"], ["phone", "(321) 536-3485"], ["carry", "AT&T Wireless"], ["deviceType", "mobile"], ["searchedguest", "Ben Knight"], ["created_at", "2016-07-14 23:11:22.173296"], ["updated_at", "2016-07-14 23:11:22.173296"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "guest_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["guest_id", 2], ["updated_at", "2016-07-14 23:11:22.175648"], ["id", 50]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  Rendered users/seek.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 6862ms (Views: 19.4ms | ActiveRecord: 127.2ms)
+
+
+Started GET "/users/local" for 127.0.0.1 at 2016-07-14 18:11:31 -0500
+Processing by UsersController#local as HTML
+  [1m[36mGuest Load (0.3ms)[0m  [1mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."searchedguest" = $1[0m  [["searchedguest", "Ben Knight"]]
+  Rendered users/local.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/single/50" for 127.0.0.1 at 2016-07-14 18:11:33 -0500
+Processing by UsersController#single as HTML
+  Parameters: {"id"=>"50"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  [1m[36mGuest Load (0.2ms)[0m  [1mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered users/single.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 22ms (Views: 19.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/killone/50" for 127.0.0.1 at 2016-07-14 18:11:34 -0500
+Processing by UsersController#killone as HTML
+  Parameters: {"id"=>"50"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 50]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/users/local
+Completed 302 Found in 4ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/users/local" for 127.0.0.1 at 2016-07-14 18:11:34 -0500
+Processing by UsersController#local as HTML
+  [1m[35mGuest Load (0.2ms)[0m  SELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."searchedguest" = $1  [["searchedguest", "Ben Knight"]]
+  Rendered users/local.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-07-14 18:11:44 -0500
+Processing by UsersController#new as HTML
+  [1m[36mGuest Load (1.4ms)[0m  [1mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered users/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 1.4ms)
+  [1m[36mGuest Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "guests" WHERE "guests"."guestname" = $1 LIMIT 1[0m  [["guestname", "*Anonymous*"]]
