@@ -4,14 +4,14 @@
     <h1>Welcome to Phone Scout. Enter a base user's Twitter handle to track a conversation.</h1>
     <% if current_guest %>
       </br>
-      <h2> Signed in as <%= current_guest.guest_name %> </h2>
+      <h2> Signed in as <%= current_guest.guestname %> </h2>
     <% end %>
   </div>
 </div>
 
 <div class="section">
   <h2>  
-   <%= form_for @user do |f| %>
+   <%= form_for @base do |f| %>
       <%= f.label :name %>
       <%= text_field_tag :name %>
       <p class="button">

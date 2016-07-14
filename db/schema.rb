@@ -11,42 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160712180515) do
+ActiveRecord::Schema.define(version: 20160630193043) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "follows", force: :cascade do |t|
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "guests", force: :cascade do |t|
     t.string   "provider"
     t.string   "uid"
-    t.string   "guest_name"
+    t.string   "guestname"
     t.string   "token"
     t.string   "secret"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "sessions", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "users", force: :cascade do |t|
-    t.text     "name"
-    t.text     "following"
-    t.text     "phone"
-    t.text     "carry"
-    t.text     "deviceType"
-    t.text     "guest_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "guest_name"
+    t.string   "name"
+    t.string   "following"
+    t.string   "phone"
+    t.string   "carry"
+    t.string   "deviceType"
+    t.string   "searchedguest"
+    t.integer  "guest_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
 end

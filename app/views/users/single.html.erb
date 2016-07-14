@@ -4,7 +4,7 @@
     <h1> <%= "Here's some stuff about " + @dude.name %> </h1>
     <% if current_guest %>
       </br>
-      <h2> Signed in as <%= current_guest.guest_name %> </h2>
+      <h2> Signed in as <%= current_guest.guestname %> </h2>
     <% end %>
   </div>
 </div>
@@ -18,9 +18,11 @@
         <%= "Phone Number: " + @dude.phone %><br> 
         <%= "Phone Carrier: " + @dude.carry %><br> 
         <%= "Phone Type: " + @dude.deviceType %><br> 
+        <%= "Searched By: " + @dude.searchedguest %><br> 
       </p>
   </h1>
 </div>
+
 
 <div class="list">
   <div class="button">

@@ -24,13 +24,13 @@ gem 'coffee-rails', '~> 4.1.0'
 # TWITTER GEM
 gem 'twitter'
 
-# WEB COMMUNICATION GEM
+#WEB COMMUNICATION GEM
 gem 'rest-client'
 
-# TWILIO GEM
+#TWILIO GEM
 gem 'twilio-ruby', '~> 4.11.1'
 
-# OAUTH
+#OAUTH
 gem 'omniauth-twitter', '~> 1.1.0'
 
 

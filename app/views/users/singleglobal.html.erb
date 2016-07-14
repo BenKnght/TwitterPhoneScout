@@ -4,7 +4,7 @@
     <h1> <%= "Here's some stuff about " + @global_dude.name %> </h1>
     <% if current_guest %>
       </br>
-      <h2> Signed in as <%= current_guest.guest_name %> </h2>
+      <h2> Signed in as <%= current_guest.guestname %> </h2>
     <% end %>
   </div>
 </div>
@@ -21,6 +21,7 @@
       </p>
   </h1>
 </div>
+
 
 <div class="list">
   <div class="button">

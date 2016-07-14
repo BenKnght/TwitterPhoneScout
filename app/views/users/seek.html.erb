@@ -1,10 +1,10 @@
 <div class="header">
   <div class="container">
-    <img src="http://pix.iemoji.com/images/emoji/apple/ios-9/256/baby-bottle.png" width="90">
+    <img src="http://pix.iemoji.com/images/emoji/apple/ios-9/256/baby-bottle.png" width="80">
     <h1>Here's people talking about the same things.</h1>
     <% if current_guest %>
       </br>
-      <h2> Signed in as <%= current_guest.guest_name %> </h2>
+      <h2> Signed in as <%= current_guest.guestname %> </h2>
     <% end %>
   </div>
 </div>
@@ -27,7 +27,7 @@
         <td><%= user.phone %></td> 
         <td><%= user.carry %></td> 
         <td><%= user.deviceType %></td>
-        <td><%= user.guest_name %></td>  
+        <td><%= user.searchedguest %></td>  
       </tr>
     <% end %>                    
   </table>
@@ -44,4 +44,3 @@
     </h1>
   </div>
 </div>
-

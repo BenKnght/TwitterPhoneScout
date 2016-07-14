@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     #This only reads in a name string
     #It doesn't need to be a full user because this user is never saved
     #This was easier to write than jsut getting a string
-		@user = User.new
+		@base = User.new
 	end
 
 	def seek
@@ -14,7 +14,7 @@ class UsersController < ApplicationController
       logged_in = 1
     else 
       #Exactly one of these should always exist
-      @cur = ( Guest.where(:guest_name => '*Anonymous*').take(1) )[0]
+      @cur = ( Guest.where(:guestname => '*Anonymous*').take(1) )[0]
       logged_in = 0
     end
 
@@ -38,7 +38,7 @@ class UsersController < ApplicationController
         response = RestClient.get(reqUrl, reqPar)
       rescue
         if (validFound == 0)
-          temp = User.create(:name => "*FLAG*", :following => ("*" + @uname + "*"), :phone => "*No match*", :carry => "*Vary search*", :deviceType => "*Thanks*", :guest_name => @cur.guest_name)
+          temp = User.create(:name => "*FLAG*", :following => ("*" + @uname + "*"), :phone => "*No match*", :carry => "*Vary search*", :deviceType => "*Thanks*", :searchedguest => @cur.guestname)
           @cur.users << temp
           @seek_users << temp
         end
@@ -64,7 +64,7 @@ class UsersController < ApplicationController
             carrierName = twil.carrier["name"].to_s
             carrierType = twil.carrier["type"].to_s
             phoneNum = (twil.national_format).to_s
-            temp = User.create(:name => u["screen_name"].to_s, :following => @uname, :phone => phoneNum, :carry => carrierName, :deviceType => carrierType, :guest_name => @cur.guest_name)
+            temp = User.create(:name => u["screen_name"].to_s, :following => @uname, :phone => phoneNum, :carry => carrierName, :deviceType => carrierType, :searchedguest => @cur.guestname)
             @cur.users << temp
             @seek_users << temp
             validFound = 1
@@ -83,25 +83,27 @@ class UsersController < ApplicationController
 
     #Creates a flag user to let you know that no results were found
     if (validFound == 0)
-      temp = User.create(:name => "*FLAG*", :following => ("*" + @uname + "*"), :phone => "*No match*", :carry => "*Vary search*", :deviceType => "*Thanks*", :guest_name => @cur.guest_name)
+      temp = User.create(:name => "*FLAG*", :following => ("*" + @uname + "*"), :phone => "*No match*", :carry => "*Vary search*", :deviceType => "*Thanks*", :searchedguest => @cur.guestname)
       @cur.users << temp
       @seek_users << temp
     end
 
+    #return redirect_to users_all_path
+
   end
 
   def all
-    @users = User.all
+    @global_users = User.all
   end
 
   def local
     temp = Guest.find_by_id(session[:guest_id])
-    @local_users = User.where(:guest_name => temp.guest_name)
+    @local_users = User.where(:searchedguest => temp.guestname)
   end
 
   def clear
     temp = Guest.find_by_id(session[:guest_id])
-    User.where(:guest_name => temp.guest_name).destroy_all
+    User.where(:searchedguest => temp.guestname).destroy_all
     return redirect_to "/users/new"
   end
 
@@ -151,7 +153,7 @@ class UsersController < ApplicationController
     @local_carriers = {}
     @local_types = {}
     temp = Guest.find_by_id(session[:guest_id])
-    all = User.where(:guest_name => temp.guest_name)
+    all = User.where(:searchedguest => temp.guestname)
 
     all.each do |u|
       c = (u.carry).to_sym
