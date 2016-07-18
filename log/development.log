@@ -20116,3 +20116,492 @@ Processing by UsersController#new as HTML
   Rendered users/new.html.erb within layouts/application (3.8ms)
 Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 1.4ms)
   [1m[36mGuest Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "guests" WHERE "guests"."guestname" = $1 LIMIT 1[0m  [["guestname", "*Anonymous*"]]
+  [1m[36mGuest Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "guests" WHERE "guests"."guestname" = $1 LIMIT 1[0m  [["guestname", "*Anonymous*"]]
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-07-15 11:02:19 -0500
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by UsersController#new as HTML
+  [1m[36mGuest Load (0.4ms)[0m  [1mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered users/new.html.erb within layouts/application (553.5ms)
+Completed 200 OK in 816ms (Views: 785.0ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/assets/guest.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-15 11:02:20 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-15 11:02:20 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-15 11:02:20 -0500
+
+
+Started GET "/assets/application.self-bad3a51133d89d05dd49738b895be1fb567a0b7a99731d5fb6e9134df80c0cfa.css?body=1" for 127.0.0.1 at 2016-07-15 11:02:20 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-15 11:02:20 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-15 11:02:20 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-07-15 11:02:20 -0500
+
+
+Started GET "/assets/guest.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-07-15 11:02:20 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-07-15 11:02:20 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-07-15 11:02:20 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-07-15 11:02:20 -0500
+
+
+Started GET "/logout" for 127.0.0.1 at 2016-07-15 11:02:25 -0500
+Processing by SessionsController#destroy as HTML
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-15 11:02:25 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2016-07-15 11:02:26 -0500
+
+
+Started GET "/auth/twitter/callback?oauth_token=bpYn4AAAAAAAvwciAAABVe9Lbqg&oauth_verifier=aGflzardUeDm2XDFBc38hs5EGcY83dkx" for 127.0.0.1 at 2016-07-15 11:02:28 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"bpYn4AAAAAAAvwciAAABVe9Lbqg", "oauth_verifier"=>"aGflzardUeDm2XDFBc38hs5EGcY83dkx", "provider"=>"twitter"}
+  [1m[35mGuest Load (1.2ms)[0m  SELECT  "guests".* FROM "guests" WHERE "guests"."provider" = $1 AND "guests"."uid" = $2  ORDER BY "guests"."id" ASC LIMIT 1  [["provider", "twitter"], ["uid", "941850966"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 7ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-15 11:02:30 -0500
+Processing by UsersController#new as HTML
+  [1m[36mGuest Load (0.4ms)[0m  [1mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered users/new.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 46ms (Views: 44.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-07-15 11:02:49 -0500
+Processing by UsersController#seek as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c50XUTZmiGxEa2Gz1TxR0wCY6lHV6M9imqRlBSRfpHZdkBz75JgPG4R4nuS1SHSJ26lzywXw4Pxs7Zd1pvPlDw==", "name"=>"BillGates", "commit"=>"Converse"}
+  [1m[35mGuest Load (0.4ms)[0m  SELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (5.8ms)[0m  [1mINSERT INTO "users" ("name", "following", "phone", "carry", "deviceType", "searchedguest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "*FLAG*"], ["following", "*BillGates*"], ["phone", "*No match*"], ["carry", "*Vary search*"], ["deviceType", "*Thanks*"], ["searchedguest", "Ben Knight"], ["created_at", "2016-07-15 16:02:54.728649"], ["updated_at", "2016-07-15 16:02:54.728649"]]
+  [1m[35m (108.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "users" SET "guest_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["guest_id", 2], ["updated_at", "2016-07-15 16:02:54.867765"], ["id", 51]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  Rendered users/seek.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 5507ms (Views: 21.2ms | ActiveRecord: 116.1ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-07-15 11:02:59 -0500
+Processing by UsersController#new as HTML
+  [1m[35mGuest Load (0.3ms)[0m  SELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered users/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-07-15 11:03:02 -0500
+Processing by UsersController#seek as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8AomEflebHTHsYM922FnvUYveR5869nEBiKoJbT87PneBy27K6DrAweifGq7FULnnR7ghKzz9lrwa1pVNlCtgA==", "name"=>"blakeir", "commit"=>"Converse"}
+  [1m[36mGuest Load (0.3ms)[0m  [1mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType", "searchedguest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["name", "DayTraders1"], ["following", "blakeir"], ["phone", "(321) 536-3485"], ["carry", "AT&T Wireless"], ["deviceType", "mobile"], ["searchedguest", "Ben Knight"], ["created_at", "2016-07-15 16:03:04.712285"], ["updated_at", "2016-07-15 16:03:04.712285"]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "guest_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["guest_id", 2], ["updated_at", "2016-07-15 16:03:04.717117"], ["id", 52]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType", "searchedguest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["name", "blastchatbleez"], ["following", "blakeir"], ["phone", "(551) 804-7174"], ["carry", "Sprint Spectrum, L.P."], ["deviceType", "mobile"], ["searchedguest", "Ben Knight"], ["created_at", "2016-07-15 16:03:05.413575"], ["updated_at", "2016-07-15 16:03:05.413575"]]
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "guest_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["guest_id", 2], ["updated_at", "2016-07-15 16:03:05.417998"], ["id", 53]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType", "searchedguest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["name", "ChipotleBot"], ["following", "blakeir"], ["phone", "(424) 373-7626"], ["carry", "Twilio"], ["deviceType", "voip"], ["searchedguest", "Ben Knight"], ["created_at", "2016-07-15 16:03:06.252429"], ["updated_at", "2016-07-15 16:03:06.252429"]]
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (2.0ms)[0m  [1mUPDATE "users" SET "guest_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["guest_id", 2], ["updated_at", "2016-07-15 16:03:06.256859"], ["id", 54]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType", "searchedguest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["name", "SuperPhone"], ["following", "blakeir"], ["phone", "(646) 576-7048"], ["carry", "Twilio"], ["deviceType", "voip"], ["searchedguest", "Ben Knight"], ["created_at", "2016-07-15 16:03:07.851938"], ["updated_at", "2016-07-15 16:03:07.851938"]]
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "guest_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["guest_id", 2], ["updated_at", "2016-07-15 16:03:07.856267"], ["id", 55]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType", "searchedguest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["name", "CallumJBooker"], ["following", "blakeir"], ["phone", "(607) 434-7166"], ["carry", "Verizon Wireless"], ["deviceType", "mobile"], ["searchedguest", "Ben Knight"], ["created_at", "2016-07-15 16:03:09.086903"], ["updated_at", "2016-07-15 16:03:09.086903"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "guest_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["guest_id", 2], ["updated_at", "2016-07-15 16:03:09.090219"], ["id", 56]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType", "searchedguest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["name", "video_meeting"], ["following", "blakeir"], ["phone", "(855) 879-8433"], ["carry", ""], ["deviceType", "landline"], ["searchedguest", "Ben Knight"], ["created_at", "2016-07-15 16:03:10.102033"], ["updated_at", "2016-07-15 16:03:10.102033"]]
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "guest_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["guest_id", 2], ["updated_at", "2016-07-15 16:03:10.106307"], ["id", 57]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType", "searchedguest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["name", "staelenslock"], ["following", "blakeir"], ["phone", "(734) 224-2824"], ["carry", "Twilio"], ["deviceType", "voip"], ["searchedguest", "Ben Knight"], ["created_at", "2016-07-15 16:03:11.827998"], ["updated_at", "2016-07-15 16:03:11.827998"]]
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "guest_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["guest_id", 2], ["updated_at", "2016-07-15 16:03:11.832308"], ["id", 58]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType", "searchedguest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["name", "RocketFiber"], ["following", "blakeir"], ["phone", "(844) 847-6253"], ["carry", ""], ["deviceType", "landline"], ["searchedguest", "Ben Knight"], ["created_at", "2016-07-15 16:03:14.012631"], ["updated_at", "2016-07-15 16:03:14.012631"]]
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "guest_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["guest_id", 2], ["updated_at", "2016-07-15 16:03:14.016858"], ["id", 59]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType", "searchedguest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["name", "getitEazy"], ["following", "blakeir"], ["phone", "(512) 213-0883"], ["carry", "Twilio"], ["deviceType", "voip"], ["searchedguest", "Ben Knight"], ["created_at", "2016-07-15 16:03:15.512009"], ["updated_at", "2016-07-15 16:03:15.512009"]]
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "guest_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["guest_id", 2], ["updated_at", "2016-07-15 16:03:15.516678"], ["id", 60]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType", "searchedguest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["name", "chrisamccoy"], ["following", "blakeir"], ["phone", "(415) 915-8574"], ["carry", "Twilio"], ["deviceType", "voip"], ["searchedguest", "Ben Knight"], ["created_at", "2016-07-15 16:03:15.791250"], ["updated_at", "2016-07-15 16:03:15.791250"]]
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "guest_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["guest_id", 2], ["updated_at", "2016-07-15 16:03:15.795493"], ["id", 61]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  Rendered users/seek.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 12971ms (Views: 20.1ms | ActiveRecord: 29.9ms)
+
+
+Started GET "/users/all" for 127.0.0.1 at 2016-07-15 11:03:23 -0500
+Processing by UsersController#all as HTML
+  [1m[36mGuest Load (0.4ms)[0m  [1mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/all.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-07-15 11:03:29 -0500
+Processing by UsersController#new as HTML
+  [1m[36mGuest Load (0.5ms)[0m  [1mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered users/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.5ms)
+  [1m[36mGuest Exists (0.9ms)[0m  [1mSELECT  1 AS one FROM "guests" WHERE "guests"."guestname" = $1 LIMIT 1[0m  [["guestname", "*Anonymous*"]]
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-18 12:09:37 -0500
+  [1m[35mActiveRecord::SchemaMigration Load (0.6ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by UsersController#new as HTML
+  [1m[36mGuest Load (0.5ms)[0m  [1mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered users/new.html.erb within layouts/application (538.7ms)
+Completed 200 OK in 808ms (Views: 778.0ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2016-07-18 12:09:40 -0500
+Processing by SessionsController#destroy as HTML
+Redirected to http://127.0.0.1:5000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-18 12:09:40 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 20ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/all" for 127.0.0.1 at 2016-07-18 12:09:42 -0500
+Processing by UsersController#all as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/all.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/singleglobal/9" for 127.0.0.1 at 2016-07-18 12:09:44 -0500
+Processing by UsersController#singleglobal as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  Rendered users/singleglobal.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/all" for 127.0.0.1 at 2016-07-18 12:09:45 -0500
+Processing by UsersController#all as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/all.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 47ms (Views: 46.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/singleglobal/1" for 127.0.0.1 at 2016-07-18 12:09:49 -0500
+Processing by UsersController#singleglobal as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/singleglobal.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/all" for 127.0.0.1 at 2016-07-18 12:09:52 -0500
+Processing by UsersController#all as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/all.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-07-18 12:09:58 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 39ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2016-07-18 12:09:59 -0500
+
+OAuth::Unauthorized (401 Authorization Required):
+  oauth (0.5.1) lib/oauth/consumer.rb:217:in `token_request'
+  oauth (0.5.1) lib/oauth/consumer.rb:136:in `get_request_token'
+  omniauth-oauth (1.1.0) lib/omniauth/strategies/oauth.rb:28:in `request_phase'
+  omniauth-twitter (1.1.0) lib/omniauth/strategies/twitter.rb:60:in `request_phase'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:215:in `request_call'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:183:in `call!'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.3.1) lib/omniauth/builder.rb:63:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/benknight/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/benknight/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/benknight/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (69.0ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (54.1ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (129.0ms)
+  [1m[36mGuest Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "guests" WHERE "guests"."guestname" = $1 LIMIT 1[0m  [["guestname", "*Anonymous*"]]
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2016-07-18 12:10:50 -0500
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/auth/twitter/callback?oauth_token=mOTIKAAAAAAAvwciAAABVf79DtY&oauth_verifier=0NLyzjx13Q1GDQ3ZZ4VXdX9VTWTIc3Pv" for 127.0.0.1 at 2016-07-18 12:10:52 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"mOTIKAAAAAAAvwciAAABVf79DtY", "oauth_verifier"=>"0NLyzjx13Q1GDQ3ZZ4VXdX9VTWTIc3Pv", "provider"=>"twitter"}
+  [1m[36mGuest Load (1.0ms)[0m  [1mSELECT  "guests".* FROM "guests" WHERE "guests"."provider" = $1 AND "guests"."uid" = $2  ORDER BY "guests"."id" ASC LIMIT 1[0m  [["provider", "twitter"], ["uid", "941850966"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 17ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-18 12:10:53 -0500
+Processing by UsersController#new as HTML
+  [1m[35mGuest Load (0.4ms)[0m  SELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered users/new.html.erb within layouts/application (534.7ms)
+Completed 200 OK in 766ms (Views: 749.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2016-07-18 12:10:56 -0500
+Processing by SessionsController#destroy as HTML
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-18 12:10:56 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2016-07-18 12:10:57 -0500
+
+
+Started GET "/auth/twitter/callback?oauth_token=ydAJfAAAAAAAvwciAAABVf79Kmk&oauth_verifier=CEczk6uvvyoJlwqZG95v2veZ7mdNGFBG" for 127.0.0.1 at 2016-07-18 12:10:59 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"ydAJfAAAAAAAvwciAAABVf79Kmk", "oauth_verifier"=>"CEczk6uvvyoJlwqZG95v2veZ7mdNGFBG", "provider"=>"twitter"}
+  [1m[36mGuest Load (0.5ms)[0m  [1mSELECT  "guests".* FROM "guests" WHERE "guests"."provider" = $1 AND "guests"."uid" = $2  ORDER BY "guests"."id" ASC LIMIT 1[0m  [["provider", "twitter"], ["uid", "941850966"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-18 12:10:59 -0500
+Processing by UsersController#new as HTML
+  [1m[35mGuest Load (0.3ms)[0m  SELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered users/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.3ms)
+  [1m[36mGuest Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "guests" WHERE "guests"."guestname" = $1 LIMIT 1[0m  [["guestname", "*Anonymous*"]]
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-18 12:12:48 -0500
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by UsersController#new as HTML
+  [1m[36mGuest Load (0.3ms)[0m  [1mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered users/new.html.erb within layouts/application (523.4ms)
+Completed 200 OK in 744ms (Views: 722.7ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-18 12:12:49 -0500
+Processing by UsersController#new as HTML
+  [1m[35mGuest Load (0.4ms)[0m  SELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered users/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2016-07-18 12:12:51 -0500
+Processing by SessionsController#destroy as HTML
+Redirected to http://127.0.0.1:5000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-18 12:12:51 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2016-07-18 12:12:52 -0500
+
+OAuth::Unauthorized (401 Authorization Required):
+  oauth (0.5.1) lib/oauth/consumer.rb:217:in `token_request'
+  oauth (0.5.1) lib/oauth/consumer.rb:136:in `get_request_token'
+  omniauth-oauth (1.1.0) lib/omniauth/strategies/oauth.rb:28:in `request_phase'
+  omniauth-twitter (1.1.0) lib/omniauth/strategies/twitter.rb:60:in `request_phase'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:215:in `request_call'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:183:in `call!'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.3.1) lib/omniauth/builder.rb:63:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/benknight/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/benknight/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/benknight/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.8ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (44.2ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (108.3ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2016-07-18 12:14:55 -0500
+
+
+Started GET "/auth/twitter/callback?oauth_token=wddkVwAAAAAAvwciAAABVf8AyNo&oauth_verifier=1D6TpHtMqyP8pq0pqO4lS6jeYHajIh3a" for 127.0.0.1 at 2016-07-18 12:14:56 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"wddkVwAAAAAAvwciAAABVf8AyNo", "oauth_verifier"=>"1D6TpHtMqyP8pq0pqO4lS6jeYHajIh3a", "provider"=>"twitter"}
+  [1m[36mGuest Load (0.5ms)[0m  [1mSELECT  "guests".* FROM "guests" WHERE "guests"."provider" = $1 AND "guests"."uid" = $2  ORDER BY "guests"."id" ASC LIMIT 1[0m  [["provider", "twitter"], ["uid", "941850966"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://127.0.0.1:5000/
+Completed 302 Found in 6ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-18 12:14:57 -0500
+Processing by UsersController#new as HTML
+  [1m[35mGuest Load (0.4ms)[0m  SELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered users/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.4ms)
+  [1m[36mGuest Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "guests" WHERE "guests"."guestname" = $1 LIMIT 1[0m  [["guestname", "*Anonymous*"]]
