@@ -9,6 +9,10 @@ class UsersController < ApplicationController
 
 	def seek
 
+    unless Guest.exists?(:guestname => '*Anonymous*')
+      Guest.create(:provider => "twitter", :uid => "*none*", :guestname => "*Anonymous*", :token => "*none*", :secret => "*none")
+    end
+
     if current_guest
       @cur = Guest.find_by_id(session[:guest_id]) 
       logged_in = 1

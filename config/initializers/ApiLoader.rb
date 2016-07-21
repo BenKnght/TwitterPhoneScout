@@ -46,10 +46,11 @@ RestClient.post("https://api.twitter.com/oauth2/token/", 'grant_type=client_cred
 end
 
 # Define filler, anonoumous guest 
+=begin
 unless Guest.exists?(:guestname => '*Anonymous*')
 	Guest.create(:provider => "twitter", :uid => "*none*", :guestname => "*Anonymous*", :token => "*none*", :secret => "*none")
 end
-
+=end
 
 #This is the old way of tapping the Twitter API
 #I left it here in case I wanted to try it again
