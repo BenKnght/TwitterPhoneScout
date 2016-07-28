@@ -8,6 +8,9 @@ gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
 
+#Heroku full features
+gem 'rails_12factor'
+
 #Instead we use Postgres
 gem 'pg'
 
@@ -20,6 +23,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+
 
 # TWITTER GEM
 gem 'twitter'
