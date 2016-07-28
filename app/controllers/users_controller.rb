@@ -68,7 +68,7 @@ class UsersController < ApplicationController
       data["users"].each do |u|
 
         bio = u["description"].to_s
-        fcount = u["follower_count"].to_s
+        fcount = u["followers_count"].to_s
         username = u["screen_name"].to_s
         plink = "https://twitter.com/" + username
         wsite = u["url"].to_s

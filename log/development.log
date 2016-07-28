@@ -22281,3 +22281,351 @@ Started GET "/users/new" for ::1 at 2016-07-28 14:01:50 -0500
 Processing by UsersController#new as HTML
   Rendered users/new.html.erb within layouts/application (0.9ms)
 Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2016-07-28 14:33:24 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (412.6ms)
+Completed 200 OK in 654ms (Views: 631.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-28 14:33:25 -0500
+
+
+Started GET "/assets/guest.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-28 14:33:25 -0500
+
+
+Started GET "/assets/application.self-06585aaaf1b98ca15be319702c5b236adb05cc9af87f1defd14767c749039375.css?body=1" for ::1 at 2016-07-28 14:33:25 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-28 14:33:25 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-28 14:33:25 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-28 14:33:25 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-07-28 14:33:25 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-28 14:33:25 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-28 14:33:25 -0500
+
+
+Started GET "/assets/guest.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-28 14:33:25 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-28 14:33:25 -0500
+
+
+Started GET "/auth/twitter" for ::1 at 2016-07-28 14:33:28 -0500
+
+OAuth::Unauthorized (401 Authorization Required):
+  oauth (0.5.1) lib/oauth/consumer.rb:217:in `token_request'
+  oauth (0.5.1) lib/oauth/consumer.rb:136:in `get_request_token'
+  omniauth-oauth (1.1.0) lib/omniauth/strategies/oauth.rb:28:in `request_phase'
+  omniauth-twitter (1.1.0) lib/omniauth/strategies/twitter.rb:60:in `request_phase'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:215:in `request_call'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:183:in `call!'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.3.1) lib/omniauth/builder.rb:63:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/benknight/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/benknight/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/benknight/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (59.7ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (56.1ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/benknight/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (138.2ms)
+
+
+Started POST "/users" for ::1 at 2016-07-28 14:33:35 -0500
+Processing by UsersController#seek as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jK3vH4Wult25bT9Xojafrrkoe0LMSLf3ODkWd1/Qdc6IhGqKI+Hhr/Zz0SCx+vnOZkddSvko7HzDXijMqGMVBw==", "name"=>"p4miles", "commit"=>"Converse"}
+  [1m[35mGuest Exists (0.5ms)[0m  SELECT  1 AS one FROM "guests" WHERE "guests"."guestname" = $1 LIMIT 1  [["guestname", "*Anonymous*"]]
+  [1m[36mGuest Load (0.3ms)[0m  [1mSELECT  "guests".* FROM "guests" WHERE "guests"."guestname" = $1 LIMIT 1[0m  [["guestname", "*Anonymous*"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("name", "following", "phone", "carry", "deviceType", "searchedguest", "followercount", "profilelink", "bio", "website", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "cachecreative"], ["following", "p4miles"], ["phone", "(865) 661-9434"], ["carry", "Verizon Wireless"], ["deviceType", "mobile"], ["searchedguest", "*Anonymous*"], ["followercount", ""], ["profilelink", "https://twitter.com/cachecreative"], ["bio", "Custom made hemp products, painted shoes, etc. for low costs. Text me at (865-661-9434)."], ["website", ""], ["created_at", "2016-07-28 19:33:37.229003"], ["updated_at", "2016-07-28 19:33:37.229003"]]
+  [1m[35m (1.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "guest_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["guest_id", 1], ["updated_at", "2016-07-28 19:33:37.247461"], ["id", 5]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("name", "following", "phone", "carry", "deviceType", "searchedguest", "followercount", "profilelink", "bio", "website", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "yourstoryshoes"], ["following", "p4miles"], ["phone", "(865) 661-9434"], ["carry", "Verizon Wireless"], ["deviceType", "mobile"], ["searchedguest", "*Anonymous*"], ["followercount", ""], ["profilelink", "https://twitter.com/yourstoryshoes"], ["bio", "Custom designs by Matthew Parton. $25 custom order. Contact me at 865-661-9434 or matthewparton94@gmail.com"], ["website", ""], ["created_at", "2016-07-28 19:33:38.568447"], ["updated_at", "2016-07-28 19:33:38.568447"]]
+  [1m[35m (1.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "guest_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["guest_id", 1], ["updated_at", "2016-07-28 19:33:38.573194"], ["id", 6]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("name", "following", "phone", "carry", "deviceType", "searchedguest", "followercount", "profilelink", "bio", "website", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "MoesNorthshore"], ["following", "p4miles"], ["phone", "(865) 696-2006"], ["carry", "AT&T Wireless"], ["deviceType", "mobile"], ["searchedguest", "*Anonymous*"], ["followercount", ""], ["profilelink", "https://twitter.com/MoesNorthshore"], ["bio", "Fast, Friendly, and absolutely delicious! Catering for Parties & Events Available (865) 696-2006"], ["website", "http://www.moes.com"], ["created_at", "2016-07-28 19:33:38.942857"], ["updated_at", "2016-07-28 19:33:38.942857"]]
+  [1m[35m (1.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "guest_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["guest_id", 1], ["updated_at", "2016-07-28 19:33:38.947553"], ["id", 7]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  Rendered users/seek.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 5662ms (Views: 22.8ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/users/new" for ::1 at 2016-07-28 14:33:45 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/all" for ::1 at 2016-07-28 14:33:46 -0500
+Processing by UsersController#all as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/all.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/singleglobal/1" for ::1 at 2016-07-28 14:33:47 -0500
+Processing by UsersController#singleglobal as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/singleglobal.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 26ms (Views: 22.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/all" for ::1 at 2016-07-28 14:33:55 -0500
+Processing by UsersController#all as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/all.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/singleglobal/2" for ::1 at 2016-07-28 14:33:57 -0500
+Processing by UsersController#singleglobal as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered users/singleglobal.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/all" for ::1 at 2016-07-28 14:33:59 -0500
+Processing by UsersController#all as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/all.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/all" for ::1 at 2016-07-28 14:34:58 -0500
+Processing by UsersController#all as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/all.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 40ms (Views: 34.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/guest.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-28 14:34:58 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-28 14:34:58 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-28 14:34:58 -0500
+
+
+Started GET "/assets/application.self-06585aaaf1b98ca15be319702c5b236adb05cc9af87f1defd14767c749039375.css?body=1" for ::1 at 2016-07-28 14:34:58 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-07-28 14:34:58 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-28 14:34:58 -0500
+
+
+Started GET "/assets/guest.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-28 14:34:58 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-28 14:34:58 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-28 14:34:58 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-28 14:34:58 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-28 14:34:58 -0500
+
+
+Started GET "/users/all" for ::1 at 2016-07-28 14:35:01 -0500
+Processing by UsersController#all as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/all.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for ::1 at 2016-07-28 14:35:03 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2016-07-28 14:35:08 -0500
+Processing by UsersController#seek as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GujNCFr/VxwB/qlKw/bVquaGXwXakBWiGHq/hVBUF9gewUid/LAgbk7gRz3QOrPKOel5De/wTinjHYE+p+d3EQ==", "name"=>"blakeir", "commit"=>"Converse"}
+  [1m[36mGuest Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "guests" WHERE "guests"."guestname" = $1 LIMIT 1[0m  [["guestname", "*Anonymous*"]]
+  [1m[35mGuest Load (0.4ms)[0m  SELECT  "guests".* FROM "guests" WHERE "guests"."guestname" = $1 LIMIT 1  [["guestname", "*Anonymous*"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType", "searchedguest", "followercount", "profilelink", "bio", "website", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["name", "DayTraders1"], ["following", "blakeir"], ["phone", "(321) 536-3485"], ["carry", "AT&T Wireless"], ["deviceType", "mobile"], ["searchedguest", "*Anonymous*"], ["followercount", "781639"], ["profilelink", "https://twitter.com/DayTraders1"], ["bio", "321 536-3485"], ["website", ""], ["created_at", "2016-07-28 19:35:10.341266"], ["updated_at", "2016-07-28 19:35:10.341266"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "guest_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["guest_id", 1], ["updated_at", "2016-07-28 19:35:10.349148"], ["id", 8]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType", "searchedguest", "followercount", "profilelink", "bio", "website", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["name", "Fameus808Mafia"], ["following", "blakeir"], ["phone", "(808) 726-2333"], ["carry", "Bandwidth SMSEnabled"], ["deviceType", "voip"], ["searchedguest", "*Anonymous*"], ["followercount", "12781"], ["profilelink", "https://twitter.com/Fameus808Mafia"], ["bio", "#808Mafia Recording Artist/Actor - Landover MD - Creator of @iFameus App 4 iPhone - CEO of WFBLLC #WorldFameusRadio -LINK BELOW- 808.726.2333"], ["website", "https://www.spreaker.com/user/fameus808mafia"], ["created_at", "2016-07-28 19:35:10.612533"], ["updated_at", "2016-07-28 19:35:10.612533"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "guest_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["guest_id", 1], ["updated_at", "2016-07-28 19:35:10.617507"], ["id", 9]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType", "searchedguest", "followercount", "profilelink", "bio", "website", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["name", "ChipotleBot"], ["following", "blakeir"], ["phone", "(424) 373-7626"], ["carry", "Twilio"], ["deviceType", "voip"], ["searchedguest", "*Anonymous*"], ["followercount", "5"], ["profilelink", "https://twitter.com/ChipotleBot"], ["bio", "I help people get their Chipotle Orders via sms...try me out at 424.373.7626"], ["website", ""], ["created_at", "2016-07-28 19:35:11.532075"], ["updated_at", "2016-07-28 19:35:11.532075"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "guest_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["guest_id", 1], ["updated_at", "2016-07-28 19:35:11.537117"], ["id", 10]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType", "searchedguest", "followercount", "profilelink", "bio", "website", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["name", "SuperPhone"], ["following", "blakeir"], ["phone", "(646) 576-7048"], ["carry", "Twilio"], ["deviceType", "voip"], ["searchedguest", "*Anonymous*"], ["followercount", "1535"], ["profilelink", "https://twitter.com/SuperPhone"], ["bio", "Unlock the potential in your relationships // Text us +1-646-576-7048 // Founder/CEO @ryanleslie"], ["website", "http://www.superphone.io"], ["created_at", "2016-07-28 19:35:11.865137"], ["updated_at", "2016-07-28 19:35:11.865137"]]
+  [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "guest_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["guest_id", 1], ["updated_at", "2016-07-28 19:35:11.869869"], ["id", 11]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType", "searchedguest", "followercount", "profilelink", "bio", "website", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["name", "CallumJBooker"], ["following", "blakeir"], ["phone", "(607) 434-7166"], ["carry", "Verizon Wireless"], ["deviceType", "mobile"], ["searchedguest", "*Anonymous*"], ["followercount", "104"], ["profilelink", "https://twitter.com/CallumJBooker"], ["bio", "Venture Capital @NextGenVP | Always free to chat via txt: 607-434-7166. Love helping turn ideas into things."], ["website", "http://www.nextgenvp.com"], ["created_at", "2016-07-28 19:35:13.565650"], ["updated_at", "2016-07-28 19:35:13.565650"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "guest_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["guest_id", 1], ["updated_at", "2016-07-28 19:35:13.570844"], ["id", 12]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType", "searchedguest", "followercount", "profilelink", "bio", "website", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["name", "video_meeting"], ["following", "blakeir"], ["phone", "(855) 879-8433"], ["carry", ""], ["deviceType", "landline"], ["searchedguest", "*Anonymous*"], ["followercount", "234"], ["profilelink", "https://twitter.com/video_meeting"], ["bio", "VideoMeeting-Call: 855-879-8433-Immersive Cloud Based Video Collaboration, Video Conferencing, Webinar, Webcast,Live Streaming,SVOD,360 Video,VR,& AR Services."], ["website", "http://www.videomeeting.biz"], ["created_at", "2016-07-28 19:35:15.057765"], ["updated_at", "2016-07-28 19:35:15.057765"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "guest_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["guest_id", 1], ["updated_at", "2016-07-28 19:35:15.062726"], ["id", 13]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType", "searchedguest", "followercount", "profilelink", "bio", "website", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["name", "staelenslock"], ["following", "blakeir"], ["phone", "(734) 224-2824"], ["carry", "Twilio"], ["deviceType", "voip"], ["searchedguest", "*Anonymous*"], ["followercount", "438"], ["profilelink", "https://twitter.com/staelenslock"], ["bio", "Servicing the Greater Metro Detroit area. Call us for all your Emergency Locksmith Services at 734-224-2824"], ["website", "http://staelenslocksmith.com"], ["created_at", "2016-07-28 19:35:17.427711"], ["updated_at", "2016-07-28 19:35:17.427711"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "guest_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["guest_id", 1], ["updated_at", "2016-07-28 19:35:17.432984"], ["id", 14]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType", "searchedguest", "followercount", "profilelink", "bio", "website", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["name", "RocketFiber"], ["following", "blakeir"], ["phone", "(844) 847-6253"], ["carry", ""], ["deviceType", "landline"], ["searchedguest", "*Anonymous*"], ["followercount", "3263"], ["profilelink", "https://twitter.com/RocketFiber"], ["bio", "Offering up to 1,000 times faster Internet and a world-class client care team, @rocketfiberhelp. Call us for amazing Internet: (844) 847-6253"], ["website", "http://www.rocketfiber.com"], ["created_at", "2016-07-28 19:35:18.548897"], ["updated_at", "2016-07-28 19:35:18.548897"]]
+  [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "guest_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["guest_id", 1], ["updated_at", "2016-07-28 19:35:18.553262"], ["id", 15]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType", "searchedguest", "followercount", "profilelink", "bio", "website", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["name", "getitEazy"], ["following", "blakeir"], ["phone", "(512) 213-0883"], ["carry", "Twilio"], ["deviceType", "voip"], ["searchedguest", "*Anonymous*"], ["followercount", "36"], ["profilelink", "https://twitter.com/getitEazy"], ["bio", "Text (512) 213-0883 to have ANY local service provider on demand!"], ["website", "http://getiteazy.com"], ["created_at", "2016-07-28 19:35:20.580910"], ["updated_at", "2016-07-28 19:35:20.580910"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "guest_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["guest_id", 1], ["updated_at", "2016-07-28 19:35:20.585734"], ["id", 16]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "following", "phone", "carry", "deviceType", "searchedguest", "followercount", "profilelink", "bio", "website", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["name", "chrisamccoy"], ["following", "blakeir"], ["phone", "(415) 915-8574"], ["carry", "Twilio"], ["deviceType", "voip"], ["searchedguest", "*Anonymous*"], ["followercount", "5192"], ["profilelink", "https://twitter.com/chrisamccoy"], ["bio", "Founder + ED @Data4America // Building @Footpr1nt. Text Hi to 415.915.8574 // Invented @YourSports // Writes @HuffingtonPost, @TheInformation, more."], ["website", "http://footprintlabs.co"], ["created_at", "2016-07-28 19:35:20.811373"], ["updated_at", "2016-07-28 19:35:20.811373"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "guest_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["guest_id", 1], ["updated_at", "2016-07-28 19:35:20.816240"], ["id", 17]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  Rendered users/seek.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 12259ms (Views: 17.6ms | ActiveRecord: 35.6ms)
+
+
+Started GET "/users/all" for ::1 at 2016-07-28 14:35:25 -0500
+Processing by UsersController#all as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/all.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/singleglobal/11" for ::1 at 2016-07-28 14:35:28 -0500
+Processing by UsersController#singleglobal as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  Rendered users/singleglobal.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/all" for ::1 at 2016-07-28 14:35:37 -0500
+Processing by UsersController#all as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/all.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/singleglobal/8" for ::1 at 2016-07-28 14:35:38 -0500
+Processing by UsersController#singleglobal as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 8]]
+  Rendered users/singleglobal.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/all" for ::1 at 2016-07-28 14:35:43 -0500
+Processing by UsersController#all as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/all.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/singleglobal/12" for ::1 at 2016-07-28 14:35:45 -0500
+Processing by UsersController#singleglobal as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 12]]
+  Rendered users/singleglobal.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.4ms)
