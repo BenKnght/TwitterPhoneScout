@@ -33,6 +33,9 @@ gem 'twilio-ruby', '~> 4.11.1'
 #OAUTH
 gem 'omniauth-twitter', '~> 1.1.0'
 
+#Autolink Hyperlinks
+gem 'rails_autolink'
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
