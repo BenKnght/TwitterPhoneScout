@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-ruby '2.2.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
@@ -8,9 +7,6 @@ gem 'rails', '4.2.6'
 #Don't use this anymore
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
-
-#Heroku full features
-gem 'rails_12factor'
 
 #Instead we use Postgres
 gem 'pg'
@@ -25,7 +21,6 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-
 # TWITTER GEM
 gem 'twitter'
 
@@ -37,9 +32,6 @@ gem 'twilio-ruby', '~> 4.11.1'
 
 #OAUTH
 gem 'omniauth-twitter', '~> 1.1.0'
-
-#Autolink Hyperlinks
-gem 'rails_autolink'
 
 
 # Use jquery as the JavaScript library

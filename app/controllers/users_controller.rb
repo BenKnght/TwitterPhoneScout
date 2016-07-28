@@ -9,7 +9,6 @@ class UsersController < ApplicationController
 
 	def seek
 
-    #Create empty guest object to assign if guest doesn't sign in
     unless Guest.exists?(:guestname => '*Anonymous*')
       Guest.create(:provider => "twitter", :uid => "*none*", :guestname => "*Anonymous*", :token => "*none*", :secret => "*none")
     end
@@ -43,17 +42,7 @@ class UsersController < ApplicationController
         response = RestClient.get(reqUrl, reqPar)
       rescue
         if (validFound == 0)
-          temp = User.create(:name => "*FLAG*", 
-            :following => ("*" + @uname + "*"), 
-            :phone => "*No match*", 
-            :carry => "*Vary search*", 
-            :deviceType => "*Thanks*", 
-            :searchedguest => @cur.guestname,
-            :followercount => "*Null*",
-            :profilelink => "*Null*",
-            :bio => "*Null*",
-            :website => "*Null*"
-          )
+          temp = User.create(:name => "*FLAG*", :following => ("*" + @uname + "*"), :phone => "*No match*", :carry => "*Vary search*", :deviceType => "*Thanks*", :searchedguest => @cur.guestname)
           @cur.users << temp
           @seek_users << temp
         end
@@ -68,11 +57,6 @@ class UsersController < ApplicationController
       data["users"].each do |u|
 
         bio = u["description"].to_s
-        fcount = u["followers_count"].to_s
-        username = u["screen_name"].to_s
-        plink = "https://twitter.com/" + username
-        wsite = u["url"].to_s
-
         phoneNum = findPhoneNum(bio)
         if (phoneNum != "none")
 
@@ -84,18 +68,7 @@ class UsersController < ApplicationController
             carrierName = twil.carrier["name"].to_s
             carrierType = twil.carrier["type"].to_s
             phoneNum = (twil.national_format).to_s
-            temp = User.create(
-              :name => username, 
-              :following => @uname, 
-              :phone => phoneNum, 
-              :carry => carrierName, 
-              :deviceType => carrierType, 
-              :searchedguest => @cur.guestname,
-              :followercount => fcount,
-              :profilelink => plink,
-              :bio => bio,
-              :website => wsite
-            )
+            temp = User.create(:name => u["screen_name"].to_s, :following => @uname, :phone => phoneNum, :carry => carrierName, :deviceType => carrierType, :searchedguest => @cur.guestname)
             @cur.users << temp
             @seek_users << temp
             validFound = 1
@@ -114,17 +87,7 @@ class UsersController < ApplicationController
 
     #Creates a flag user to let you know that no results were found
     if (validFound == 0)
-      temp = User.create(:name => "*FLAG*", 
-        :following => ("*" + @uname + "*"), 
-        :phone => "*No match*", 
-        :carry => "*Vary search*", 
-        :deviceType => "*Thanks*", 
-        :searchedguest => @cur.guestname,
-        :followercount => "*Null*",
-        :profilelink => "*Null*",
-        :bio => "*Null*",
-        :website => "*Null*"
-      )      
+      temp = User.create(:name => "*FLAG*", :following => ("*" + @uname + "*"), :phone => "*No match*", :carry => "*Vary search*", :deviceType => "*Thanks*", :searchedguest => @cur.guestname)
       @cur.users << temp
       @seek_users << temp
     end

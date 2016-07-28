@@ -27,9 +27,9 @@ html, body {
 }
 
 .list {
-    width:1350px;
+    width:600px;
     float:left;
-    padding:40px; 
+    padding:20px; 
     color:#336699;
 }
 
@@ -38,7 +38,7 @@ html, body {
     float:left;
     padding:30px; 
     color:#336699;
-    font-size: 25px;
+    font-size: 23px;
     text-align: left;
 }
 
