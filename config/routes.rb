@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  root to: 'users#new'
+  root 'users#new'
   
   get "/users/new" => "users#new"
   post "/users" => "users#seek"
