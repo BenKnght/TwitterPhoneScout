@@ -21,7 +21,7 @@ $lookup_client = Twilio::REST::LookupsClient.new twilSID, twilTok
 cKey      = "S4KH3QimDeQX2noM01Ev5cbNN"
 cSec      = "CPXZZm2apHWr1X9GT4yF8YaJzeqBd8aEPJFLfCkz4Q4pWoHpN8"
 aTok      = "941850966-wKWATXuTvkyFg77icyrOjXock9QuxtM5SqsCDzzk"
-aSec 	  = "Z6GSP8qoCfKJeVORUeEAikcP9cMKTu5Vb6YZ4wO67t856"
+aSec 	    = "Z6GSP8qoCfKJeVORUeEAikcP9cMKTu5Vb6YZ4wO67t856"
 
 #This process uses the above credentials to secure a 'bearer token' 
 #A unique token is gathered every time the program is run because these tokens are subject to change

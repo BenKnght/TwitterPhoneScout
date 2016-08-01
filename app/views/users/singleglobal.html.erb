@@ -17,7 +17,11 @@
         <%= "Found Following: " + @global_dude.following %><br>
         <%= "Phone Number: " + @global_dude.phone %><br> 
         <%= "Phone Carrier: " + @global_dude.carry %><br> 
-        <%= "Phone Type: " + @global_dude.deviceType %><br> 
+        <%= "Phone Type: " + @global_dude.deviceType %><br>
+        <%= "Follower Count: " + @global_dude.followercount %><br> 
+        <%= "Bio: " + @global_dude.bio %><br> 
+        <%= "Profile: " %> <%= auto_link(@global_dude.profilelink) %> <br> 
+        <%= "Website: " %> <%= auto_link(@global_dude.website) %> <br> 
       </p>
   </h1>
 </div>
