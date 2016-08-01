@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160728174220) do
+ActiveRecord::Schema.define(version: 20160630193050) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,13 +33,13 @@ ActiveRecord::Schema.define(version: 20160728174220) do
     t.string   "carry"
     t.string   "deviceType"
     t.string   "searchedguest"
-    t.integer  "guest_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
     t.string   "followercount"
     t.string   "profilelink"
     t.string   "bio"
     t.string   "website"
+    t.integer  "guest_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
 end
