@@ -21224,3 +21224,78 @@ Processing by UsersController#all as HTML
   [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
   Rendered users/all.html.erb within layouts/application (1.1ms)
 Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/all" for ::1 at 2016-08-01 11:41:36 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#all as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/all.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 219ms (Views: 202.1ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/users/new" for ::1 at 2016-08-01 11:41:38 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (447.4ms)
+Completed 200 OK in 467ms (Views: 466.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/all" for ::1 at 2016-08-01 11:41:40 -0500
+Processing by UsersController#all as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/all.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/getstats" for ::1 at 2016-08-01 11:41:46 -0500
+Processing by UsersController#getstats as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/getstats.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/all" for ::1 at 2016-08-01 11:41:47 -0500
+Processing by UsersController#all as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/all.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-08-01 13:24:51 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (454.1ms)
+Completed 200 OK in 693ms (Views: 666.5ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/assets/guest.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-01 13:24:52 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-01 13:24:52 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-01 13:24:52 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-08-01 13:24:52 -0500
+
+
+Started GET "/assets/application.self-bad3a51133d89d05dd49738b895be1fb567a0b7a99731d5fb6e9134df80c0cfa.css?body=1" for ::1 at 2016-08-01 13:24:52 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-08-01 13:24:52 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-08-01 13:24:52 -0500
+
+
+Started GET "/assets/guest.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-01 13:24:52 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-01 13:24:52 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-01 13:24:52 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-01 13:24:52 -0500
